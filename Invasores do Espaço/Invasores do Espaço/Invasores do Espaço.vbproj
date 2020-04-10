@@ -79,13 +79,18 @@
       <DependentUpon>Inicial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Instrocoes.Designer.vb">
+      <DependentUpon>Instrocoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Instrocoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Invasores.Designer.vb">
       <DependentUpon>Invasores.vb</DependentUpon>
     </Compile>
     <Compile Include="Invasores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,16 +106,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pontuação.Designer.vb">
-      <DependentUpon>Pontuação.vb</DependentUpon>
+    <Compile Include="opcoes.Designer.vb">
+      <DependentUpon>opcoes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pontuação.vb">
+    <Compile Include="opcoes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Variaveis.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrocoes.resx">
+      <DependentUpon>Instrocoes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invasores.resx">
       <DependentUpon>Invasores.vb</DependentUpon>
@@ -121,8 +130,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pontuação.resx">
-      <DependentUpon>Pontuação.vb</DependentUpon>
+    <EmbeddedResource Include="opcoes.resx">
+      <DependentUpon>opcoes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

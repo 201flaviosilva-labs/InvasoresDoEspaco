@@ -1,0 +1,14 @@
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Release\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Release\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Release\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores_do_Espaço.Invasores.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Release\Invasores do Espaço.pdb

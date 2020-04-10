@@ -1,7 +1,6 @@
 ﻿Public Class Inicial
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Nome = InputBox("Qual é o teu nome?", "Invasores do espaço", "João")
         Invasores.Show()
     End Sub
 
@@ -10,6 +9,10 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Pontuação.Show()
+        Instrocoes.Show()
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        opcoes.show()
     End Sub
 End Class
