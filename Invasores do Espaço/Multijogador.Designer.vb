@@ -42,7 +42,7 @@ Partial Class Multijogador
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(118, 37)
         Me.Button8.TabIndex = 18
-        Me.Button8.Text = "Pontos"
+        Me.Button8.Text = "PvE"
         Me.Button8.UseVisualStyleBackColor = True
         Me.Button8.Visible = False
         '

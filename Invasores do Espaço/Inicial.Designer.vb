@@ -31,11 +31,6 @@ Partial Class Inicial
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -43,9 +38,10 @@ Partial Class Inicial
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(12, 99)
+        Me.Button1.Location = New System.Drawing.Point(18, 145)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(118, 37)
+        Me.Button1.Size = New System.Drawing.Size(177, 54)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Jogo Rápido"
         Me.Button1.UseVisualStyleBackColor = True
@@ -53,9 +49,10 @@ Partial Class Inicial
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(12, 313)
+        Me.Button2.Location = New System.Drawing.Point(18, 457)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(118, 36)
+        Me.Button2.Size = New System.Drawing.Size(177, 53)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Sair"
         Me.Button2.UseVisualStyleBackColor = True
@@ -63,9 +60,10 @@ Partial Class Inicial
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button3.Location = New System.Drawing.Point(12, 271)
+        Me.Button3.Location = New System.Drawing.Point(18, 396)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(118, 36)
+        Me.Button3.Size = New System.Drawing.Size(177, 53)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Opções"
         Me.Button3.UseVisualStyleBackColor = True
@@ -76,7 +74,8 @@ Partial Class Inicial
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.Location = New System.Drawing.Point(37, 9)
+        Me.Label1.Location = New System.Drawing.Point(56, 13)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(238, 24)
         Me.Label1.TabIndex = 3
@@ -85,18 +84,20 @@ Partial Class Inicial
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(304, 9)
+        Me.Label2.Location = New System.Drawing.Point(456, 13)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 19)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Demo"
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Button4.Location = New System.Drawing.Point(12, 228)
+        Me.Button4.Location = New System.Drawing.Point(18, 333)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(118, 37)
+        Me.Button4.Size = New System.Drawing.Size(177, 54)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "Multijogador"
         Me.Button4.UseVisualStyleBackColor = True
@@ -104,9 +105,10 @@ Partial Class Inicial
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(12, 185)
+        Me.Button5.Location = New System.Drawing.Point(18, 270)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(118, 37)
+        Me.Button5.Size = New System.Drawing.Size(177, 54)
         Me.Button5.TabIndex = 6
         Me.Button5.Text = "Original"
         Me.Button5.UseVisualStyleBackColor = True
@@ -114,9 +116,10 @@ Partial Class Inicial
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(12, 142)
+        Me.Button6.Location = New System.Drawing.Point(18, 208)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(118, 37)
+        Me.Button6.Size = New System.Drawing.Size(177, 54)
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "Campanha"
         Me.Button6.UseVisualStyleBackColor = True
@@ -124,75 +127,22 @@ Partial Class Inicial
         'Button12
         '
         Me.Button12.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button12.Location = New System.Drawing.Point(136, 312)
+        Me.Button12.Location = New System.Drawing.Point(204, 456)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(242, 37)
+        Me.Button12.Size = New System.Drawing.Size(363, 54)
         Me.Button12.TabIndex = 20
         Me.Button12.Text = "Ajuda?"
         Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(260, 174)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(118, 37)
-        Me.Button9.TabIndex = 19
-        Me.Button9.Text = "Quadras"
-        Me.Button9.UseVisualStyleBackColor = True
-        Me.Button9.Visible = False
-        '
-        'Button10
-        '
-        Me.Button10.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(260, 217)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(118, 37)
-        Me.Button10.TabIndex = 18
-        Me.Button10.Text = "Triplas"
-        Me.Button10.UseVisualStyleBackColor = True
-        Me.Button10.Visible = False
-        '
-        'Button11
-        '
-        Me.Button11.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(260, 260)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(118, 37)
-        Me.Button11.TabIndex = 17
-        Me.Button11.Text = "Duplas"
-        Me.Button11.UseVisualStyleBackColor = True
-        Me.Button11.Visible = False
-        '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button8.Location = New System.Drawing.Point(136, 242)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(118, 37)
-        Me.Button8.TabIndex = 16
-        Me.Button8.Text = "Pontos"
-        Me.Button8.UseVisualStyleBackColor = True
-        Me.Button8.Visible = False
-        '
-        'Button7
-        '
-        Me.Button7.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(136, 199)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(118, 37)
-        Me.Button7.TabIndex = 15
-        Me.Button7.Text = "PvP"
-        Me.Button7.UseVisualStyleBackColor = True
-        Me.Button7.Visible = False
         '
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(133, 38)
+        Me.Label3.Location = New System.Drawing.Point(200, 56)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(245, 133)
+        Me.Label3.Size = New System.Drawing.Size(366, 193)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Dicas"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -200,26 +150,22 @@ Partial Class Inicial
         'Button13
         '
         Me.Button13.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(12, 36)
+        Me.Button13.Location = New System.Drawing.Point(200, 208)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(4)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(118, 27)
+        Me.Button13.Size = New System.Drawing.Size(368, 39)
         Me.Button13.TabIndex = 22
         Me.Button13.Text = "Nova Dica"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Inicial
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(401, 375)
+        Me.ClientSize = New System.Drawing.Size(602, 548)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button10)
-        Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -228,8 +174,12 @@ Partial Class Inicial
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inicial"
-        Me.Text = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Inicial"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,11 +193,6 @@ Partial Class Inicial
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
-    Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button13 As System.Windows.Forms.Button
 

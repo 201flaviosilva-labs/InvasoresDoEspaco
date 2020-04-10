@@ -1,4 +1,4 @@
-﻿Public Class JogoAPontosJvJ
+﻿Public Class Jogo_PvE
     'Exencial para o jogo
     Dim Jogador1Direita As Boolean 'Define o movimento do jogador 1 ir para a Direira
     Dim Jogador1Esquerda As Boolean 'Define o movimento do jogador 1 ir para a Esquerda
@@ -100,7 +100,7 @@
         End If
 
         'Jogador 3-------------------------------------------------------------
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 3 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
             'Ao clicar nas teclas (<- ou ->) permitir mover
             '-> - Direita
             If e.KeyValue = Keys.Right Then
@@ -125,7 +125,7 @@
 
 
         'Jogador 4--------------------------------------------------
-        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
             'Ao clicar nas teclas (F ou H) permitir mover
             'H - Direita
             If e.KeyValue = Keys.H Then
@@ -149,7 +149,7 @@
         End If
 
         'Jogador 5------------------------------------------
-        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mias
+        If JogoNumJogadoresMultijogador >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mias
             'Ao clicar nas teclas (4 ou 6) permitir mover
             '6 - Direita
             If e.KeyValue = Keys.NumPad6 Then
@@ -194,7 +194,7 @@
 
 
 
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
             'Jogador 3
             If (Jogador3Direita = True) And (PicJogador3.Left + PicJogador3.Width < Me.ClientRectangle.Width) Then
                 PicJogador3.Left += VelocidadeJogador
@@ -204,7 +204,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
             'Jogador 4
             If (Jogador4Direita = True) And (PicJogador4.Left + PicJogador4.Width < Me.ClientRectangle.Width) Then
                 PicJogador4.Left += VelocidadeJogador
@@ -214,7 +214,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
             'Jogador 5
             If (Jogador5Direita = True) And (PicJogador5.Left + PicJogador5.Width < Me.ClientRectangle.Width) Then
                 PicJogador5.Left += VelocidadeJogador
@@ -258,7 +258,7 @@
             Jogador2Direita = False
         End If
 
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
             'Jogador 3-----------------------
             '-> - Direita
             If e.KeyValue = Keys.Right Then
@@ -275,7 +275,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
             'Jogador 4-------------------
             'H - Direita
             If e.KeyValue = Keys.H Then
@@ -293,7 +293,7 @@
         End If
 
 
-        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
+        If JogoNumJogadoresMultijogador >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
             'Jogador 5
             '6 - Direita
             If e.KeyValue = Keys.NumPad6 Then
@@ -315,21 +315,21 @@
         'Loading Inicial
         OpcoesGeral()
 
-        If JogoPontosNJogadores >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
+        If JogoNumJogadoresMultijogador >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
             PicJogador3.Visible = True 'Torna a pic do jogador visivel
             Label5.Visible = True 'Torna a label dos pontos visivel
         End If
-        If JogoPontosNJogadores >= 4 Then
+        If JogoNumJogadoresMultijogador >= 4 Then
             PicJogador4.Visible = True
             Label6.Visible = True
         End If
 
-        If JogoPontosNJogadores >= 5 Then
+        If JogoNumJogadoresMultijogador >= 5 Then
             PicJogador5.Visible = True
             Label7.Visible = True
         End If
 
-        If JogoPontosNJogadores >= 6 Then
+        If JogoNumJogadoresMultijogador >= 6 Then
             PicJogador6.Visible = True
             Label8.Visible = True
             TimerMoverJogadorRato.Enabled = True
@@ -381,22 +381,22 @@
         RotinaPontuacaoJ1()
         RotinaPontuacaoJ2()
 
-        If JogoPontosNJogadores >= 3 Then
+        If JogoNumJogadoresMultijogador >= 3 Then
             RotinaPontuacaoJ3()
             Jogador3Direita = False
             Jogador3Esquerda = False
         End If
-        If JogoPontosNJogadores >= 4 Then
+        If JogoNumJogadoresMultijogador >= 4 Then
             RotinaPontuacaoJ4()
             Jogador4Direita = False
             Jogador4Esquerda = False
         End If
-        If JogoPontosNJogadores >= 5 Then
+        If JogoNumJogadoresMultijogador >= 5 Then
             RotinaPontuacaoJ5()
             Jogador5Direita = False
             Jogador5Esquerda = False
         End If
-        If JogoPontosNJogadores >= 6 Then
+        If JogoNumJogadoresMultijogador >= 6 Then
             TimerMoverJogadorRato.Enabled = True
             RotinaPontuacaoJ6()
         End If
@@ -425,7 +425,7 @@
         End If
 
 
-        If JogoPontosNJogadores >= 3 Then
+        If JogoNumJogadoresMultijogador >= 3 Then
             If PictTiroJ3.Visible = True Then 'Se o tiro estiver visivel
                 PictTiroJ3.Top -= VelocidadeTiro 'O tiro começa a andar para cima
             End If
@@ -436,7 +436,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 4 Then
+        If JogoNumJogadoresMultijogador >= 4 Then
             If PictTiroJ4.Visible = True Then 'Se o tiro estiver visivel
                 PictTiroJ4.Top -= VelocidadeTiro 'O tiro começa a andar para cima
             End If
@@ -447,7 +447,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 5 Then
+        If JogoNumJogadoresMultijogador >= 5 Then
             If PictTiroJ5.Visible = True Then 'Se o tiro estiver visivel
                 PictTiroJ5.Top -= VelocidadeTiro 'O tiro começa a andar para cima
             End If
@@ -458,7 +458,7 @@
             End If
         End If
 
-        If JogoPontosNJogadores >= 6 Then
+        If JogoNumJogadoresMultijogador >= 6 Then
             If PictTiroJ6.Visible = True Then 'Se o tiro estiver visivel
                 PictTiroJ6.Top -= VelocidadeTiro 'O tiro começa a andar para cima
             End If
@@ -574,7 +574,7 @@
 
     Private Sub MatarInvasorJ3()
         'Rotina da morte do Invasor
-        If JogoPontosNJogadores >= 3 Then
+        If JogoNumJogadoresMultijogador >= 3 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ3.Top + PictTiroJ3.Height >= Invasores(X).Top) And (PictTiroJ3.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ3.Left + PictTiroJ3.Width >= Invasores(X).Left) And (PictTiroJ3.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ3.Visible = True) And (Invasores(X).Visible = True) Then
 
@@ -598,7 +598,7 @@
 
     Private Sub MatarInvasorJ4()
         'Rotina da morte do Invasor
-        If JogoPontosNJogadores >= 4 Then
+        If JogoNumJogadoresMultijogador >= 4 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ4.Top + PictTiroJ4.Height >= Invasores(X).Top) And (PictTiroJ4.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ4.Left + PictTiroJ4.Width >= Invasores(X).Left) And (PictTiroJ4.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ4.Visible = True) And (Invasores(X).Visible = True) Then
 
@@ -622,7 +622,7 @@
 
     Private Sub MatarInvasorJ5()
         'Rotina da morte do Invasor
-        If JogoPontosNJogadores >= 5 Then
+        If JogoNumJogadoresMultijogador >= 5 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ5.Top + PictTiroJ5.Height >= Invasores(X).Top) And (PictTiroJ5.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ5.Left + PictTiroJ5.Width >= Invasores(X).Left) And (PictTiroJ5.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ5.Visible = True) And (Invasores(X).Visible = True) Then
 
@@ -646,7 +646,7 @@
 
     Private Sub MatarInvasorJ6()
         'Rotina da morte do Invasor
-        If JogoPontosNJogadores >= 6 Then
+        If JogoNumJogadoresMultijogador >= 6 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ6.Top + PictTiroJ6.Height >= Invasores(X).Top) And (PictTiroJ6.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ6.Left + PictTiroJ6.Width >= Invasores(X).Left) And (PictTiroJ6.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ6.Visible = True) And (Invasores(X).Visible = True) Then
 
@@ -1022,7 +1022,7 @@
 
     Private Sub TimerJogadorRato_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerMoverJogadorRato.Tick
         'Timer do Rato
-        If JogoPontosNJogadores >= 6 Then 'Se o número de jogadores foi igual ou ais que 6
+        If JogoNumJogadoresMultijogador >= 6 Then 'Se o número de jogadores foi igual ou ais que 6
             Dim PicX As Integer = PicJogador6.Location.X ' Deteta a localização do jogador no eixo do X
             Dim PicY As Integer = PicJogador6.Location.Y ' Deteta a localização do jogador no eixo do Y
 

@@ -24,47 +24,29 @@
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         'Multijogaodr
         Multijogador.Show()
-        Button7.Visible = True
-        Button8.Visible = True
     End Sub
 
-    Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'Duplas
         If JogoPontos = True Then
-            JogoPontosNJogadores = 2
-            JogoAPontosJvJ.Show()
+            JogoNumJogadoresMultijogador = 2
+            Jogo_PvE.Show()
         End If
     End Sub
 
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        'PvP
-        JogoPontos = False
-        Button9.Visible = True
-        Button10.Visible = False
-        Button11.Visible = True
-    End Sub
-
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
-        'Pontos
-        JogoPontos = True
-        Button9.Visible = True
-        Button10.Visible = True
-        Button11.Visible = True
-    End Sub
-
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'triplas
         If JogoPontos = True Then
-            JogoPontosNJogadores = 3
-            JogoAPontosJvJ.Show()
+            JogoNumJogadoresMultijogador = 3
+            Jogo_PvE.Show()
         End If
     End Sub
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'quadras
         If JogoPontos = True Then
-            JogoPontosNJogadores = 4
-            JogoAPontosJvJ.Show()
+            JogoNumJogadoresMultijogador = 4
+            Jogo_PvE.Show()
         End If
     End Sub
 

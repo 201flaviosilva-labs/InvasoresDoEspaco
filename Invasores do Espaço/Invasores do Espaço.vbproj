@@ -112,17 +112,17 @@
     <Compile Include="Multijogador.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Opcoes.Designer.vb">
-      <DependentUpon>Opcoes.vb</DependentUpon>
+    <Compile Include="Instrocoes.Designer.vb">
+      <DependentUpon>Instrocoes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Opcoes.vb">
+    <Compile Include="Instrocoes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
-    <Compile Include="JogoAPontosJvJ.Designer.vb">
-      <DependentUpon>JogoAPontosJvJ.vb</DependentUpon>
+    <Compile Include="Condicoes.vb" />
+    <Compile Include="Jogo_PvE.Designer.vb">
+      <DependentUpon>Jogo_PvE.vb</DependentUpon>
     </Compile>
-    <Compile Include="JogoAPontosJvJ.vb">
+    <Compile Include="Jogo_PvE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,6 +140,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Opcoes.Designer.vb">
+      <DependentUpon>Opcoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opcoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcoesDeathmatch.Designer.vb">
+      <DependentUpon>OpcoesDeathmatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OpcoesDeathmatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Jogo_Deathmatch.resx">
@@ -154,17 +166,23 @@
     <EmbeddedResource Include="Multijogador.resx">
       <DependentUpon>Multijogador.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Opcoes.resx">
-      <DependentUpon>Opcoes.vb</DependentUpon>
+    <EmbeddedResource Include="Instrocoes.resx">
+      <DependentUpon>Instrocoes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JogoAPontosJvJ.resx">
-      <DependentUpon>JogoAPontosJvJ.vb</DependentUpon>
+    <EmbeddedResource Include="Jogo_PvE.resx">
+      <DependentUpon>Jogo_PvE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opcoes.resx">
+      <DependentUpon>Opcoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcoesDeathmatch.resx">
+      <DependentUpon>OpcoesDeathmatch.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
