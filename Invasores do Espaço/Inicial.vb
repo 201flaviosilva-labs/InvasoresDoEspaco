@@ -9,10 +9,11 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Instrocoes.Show()
+        Opcoes.Show()
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        'Multijogaodr
         Button7.Visible = True
         Button8.Visible = True
     End Sub
@@ -44,16 +45,16 @@
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
         'triplas
         If JogoPontos = True Then
-            JogoAPontosJvJ.Show()
             JogoPontosNJogadores = 3
+            JogoAPontosJvJ.Show()
         End If
     End Sub
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
         'quadras
         If JogoPontos = True Then
-            JogoAPontosJvJ.Show()
             JogoPontosNJogadores = 4
+            JogoAPontosJvJ.Show()
         End If
     End Sub
 End Class

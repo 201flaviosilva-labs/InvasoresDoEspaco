@@ -63,7 +63,7 @@ Partial Class Inicial
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Instrucções"
+        Me.Button3.Text = "Opcoes"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label1

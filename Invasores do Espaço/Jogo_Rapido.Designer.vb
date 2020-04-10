@@ -29,6 +29,7 @@ Partial Class Jogo_Rapido
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.TimerInvasor = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NaveJogador, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,7 +95,12 @@ Partial Class Jogo_Rapido
         Me.Label3.Text = "Tempo"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Invasores
+        'TimerInvasor
+        '
+        Me.TimerInvasor.Enabled = True
+        Me.TimerInvasor.Interval = 1
+        '
+        'Jogo_Rapido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -106,7 +112,7 @@ Partial Class Jogo_Rapido
         Me.Controls.Add(Me.PictTiro)
         Me.Controls.Add(Me.NaveJogador)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Name = "Invasores"
+        Me.Name = "Jogo_Rapido"
         Me.Text = "Invasores"
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NaveJogador, System.ComponentModel.ISupportInitialize).EndInit()
@@ -119,4 +125,5 @@ Partial Class Jogo_Rapido
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TimerInvasor As System.Windows.Forms.Timer
 End Class

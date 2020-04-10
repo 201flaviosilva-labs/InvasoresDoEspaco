@@ -38,6 +38,7 @@ Partial Class JogoAPontosJvJ
         Me.PicJogador3 = New System.Windows.Forms.PictureBox()
         Me.PictTiroJ4 = New System.Windows.Forms.PictureBox()
         Me.PicJogador4 = New System.Windows.Forms.PictureBox()
+        Me.TimerInvasores = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicJogador1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicJogador2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +94,7 @@ Partial Class JogoAPontosJvJ
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(148, 26)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Pontos Jogador 1"
+        Me.Label2.Text = "0"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -136,7 +137,7 @@ Partial Class JogoAPontosJvJ
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(148, 26)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Pontos Jogador 2"
+        Me.Label4.Text = "0"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
@@ -148,8 +149,9 @@ Partial Class JogoAPontosJvJ
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(148, 26)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Pontos Jogador 2"
+        Me.Label5.Text = "0"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label5.Visible = False
         '
         'Label6
         '
@@ -160,8 +162,9 @@ Partial Class JogoAPontosJvJ
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(148, 26)
         Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Pontos Jogador 2"
+        Me.Label6.Text = "0"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label6.Visible = False
         '
         'PictTiroJ3
         '
@@ -171,6 +174,7 @@ Partial Class JogoAPontosJvJ
         Me.PictTiroJ3.Size = New System.Drawing.Size(10, 20)
         Me.PictTiroJ3.TabIndex = 11
         Me.PictTiroJ3.TabStop = False
+        Me.PictTiroJ3.Visible = False
         '
         'PicJogador3
         '
@@ -181,6 +185,7 @@ Partial Class JogoAPontosJvJ
         Me.PicJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicJogador3.TabIndex = 10
         Me.PicJogador3.TabStop = False
+        Me.PicJogador3.Visible = False
         '
         'PictTiroJ4
         '
@@ -190,6 +195,7 @@ Partial Class JogoAPontosJvJ
         Me.PictTiroJ4.Size = New System.Drawing.Size(10, 20)
         Me.PictTiroJ4.TabIndex = 13
         Me.PictTiroJ4.TabStop = False
+        Me.PictTiroJ4.Visible = False
         '
         'PicJogador4
         '
@@ -200,6 +206,12 @@ Partial Class JogoAPontosJvJ
         Me.PicJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PicJogador4.TabIndex = 12
         Me.PicJogador4.TabStop = False
+        Me.PicJogador4.Visible = False
+        '
+        'TimerInvasores
+        '
+        Me.TimerInvasores.Enabled = True
+        Me.TimerInvasores.Interval = 1
         '
         'JogoAPontosJvJ
         '
@@ -250,4 +262,5 @@ Partial Class JogoAPontosJvJ
     Friend WithEvents PicJogador3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictTiroJ4 As System.Windows.Forms.PictureBox
     Friend WithEvents PicJogador4 As System.Windows.Forms.PictureBox
+    Friend WithEvents TimerInvasores As System.Windows.Forms.Timer
 End Class

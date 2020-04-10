@@ -18,12 +18,15 @@
     Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
     Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
     'Pontuações e temporalizador
+    Dim AlturadaMorte As Double = 0 'Recebe a altura da morte do invasor
+    Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
+    Dim PontoPorMorte As Double 'Contabiliza o POnto da morte
+    'Dim PontosSoma As Integer = 0 ' PontosSoma += NInvasoresMortos * 100
     Dim PontosJogador1 As Integer = 0 'Define os pontos do jogador 1
     Dim PontosJogador2 As Integer = 0 'Define os pontos do jogador 2
     Dim PontosJogador3 As Integer = 0 'Define os pontos do jogador 3
     Dim PontosJogador4 As Integer = 0 'Define os pontos do jogador 4
-    Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
-    Dim NInvasoresMortos As Integer = 0 'Diz o número de invasores mortos
+    'Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
@@ -31,16 +34,11 @@
         TemporalizadorDeJogo()
         MoverJogador()
         MoverTiro()
-        MoverInvasor()
         GameOver()
         MatarInvasorJ1()
         MatarInvasorJ2()
         MatarInvasorJ3()
         MatarInvasorJ4()
-        RotinaPontuacaoJ1()
-        RotinaPontuacaoJ2()
-        RotinaPontuacaoJ3()
-        RotinaPontuacaoJ4()
     End Sub
 
     Private Sub Invasores_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
@@ -226,7 +224,7 @@
             End If
 
             'F - Esquerda
-            If e.KeyValue = Keys.J Then
+            If e.KeyValue = Keys.F Then
                 'Bloqueia o movimento para a esquerda e para a direita
                 Jogador3Esquerda = False
                 Jogador3Direita = False
@@ -255,7 +253,17 @@
         'Loading Inicial
         OpcoesInvasores()
         OpcoesGeral()
+
+        If JogoPontosNJogadores >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
+            PicJogador3.Visible = True
+            Label5.Visible = True
+        End If
+        If JogoPontosNJogadores = 4 Then
+            PicJogador4.Visible = True
+            Label6.Visible = True
+        End If
     End Sub
+
     Private Sub OpcoesGeral()
         'Opções de tudo (Quase)
         'Para todos os invasores faz isto
@@ -281,7 +289,6 @@
         PontosJogador3 = 0
         PontosJogador4 = 0
         TempoPartida = 0
-        NInvasoresMortos = 0
         ContadorNumeroInvasoresMortos = 0
         Jogador1Direita = False
         Jogador1Esquerda = False
@@ -290,17 +297,16 @@
         TimerPrincipal.Enabled = True
         RotinaPontuacaoJ1()
         RotinaPontuacaoJ2()
+
         If JogoPontosNJogadores >= 3 Then
             RotinaPontuacaoJ3()
             Jogador3Direita = False
             Jogador3Esquerda = False
-            PicJogador3.Visible = True
         End If
         If JogoPontosNJogadores = 4 Then
             RotinaPontuacaoJ4()
             Jogador4Direita = False
             Jogador4Esquerda = False
-            PicJogador4.Visible = True
         End If
         TemporalizadorDeJogo()
     End Sub
@@ -379,6 +385,7 @@
             'Se algum invasor atingir o bico da nave, então o jogo acaba
             If Invasores(X).Top + Invasores(X).Height >= PicJogador1.Top And Invasores(X).Visible = True Then
                 TimerPrincipal.Enabled = False 'Parar o timer
+                TimerInvasores.Enabled = False 'parar os invasores de andar
                 Me.X = NumDeInvasores 'Dizer para parar de fazer o ciclo
                 MsgBox("Game Over - A terra foi Invadida") 'Informar que a terra foi invadida e que perdeu
                 NovoJogo() 'Perguntar se quer começar de novo
@@ -403,26 +410,28 @@
         'Rotina da morte do Invasor
         For Me.X = 1 To NumDeInvasores
             If (PictTiroJ1.Top + PictTiroJ1.Height >= Invasores(X).Top) And (PictTiroJ1.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ1.Left + PictTiroJ1.Width >= Invasores(X).Left) And (PictTiroJ1.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ1.Visible = True) And (Invasores(X).Visible = True) Then
+
+                PontuacaoPorDegrauJ1()
+
                 Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiroJ1.Visible = False 'Torna o tiro invisivel
                 ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
-                PontosJogador1 += 1 'Aumentar pontos para o jogador 1
             End If
         Next
-        RotinaPontuacaoJ1() 'Chama a rotina da pontuação para mostrar os pontos
     End Sub
 
     Private Sub MatarInvasorJ2()
         'Rotina da morte do Invasor
         For Me.X = 1 To NumDeInvasores
             If (PictTiroJ2.Top + PictTiroJ2.Height >= Invasores(X).Top) And (PictTiroJ2.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ2.Left + PictTiroJ2.Width >= Invasores(X).Left) And (PictTiroJ2.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ2.Visible = True) And (Invasores(X).Visible = True) Then
+
+                PontuacaoPorDegrauJ2()
+
                 Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiroJ2.Visible = False 'Torna o tiro invisivel
                 ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
-                PontosJogador2 += 1 'Aumentar pontos para o jogador 1
             End If
         Next
-        RotinaPontuacaoJ2() 'Chama a rotina da pontuação para mostrar os pontos
     End Sub
 
     Private Sub MatarInvasorJ3()
@@ -430,13 +439,14 @@
         If JogoPontosNJogadores >= 3 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ3.Top + PictTiroJ3.Height >= Invasores(X).Top) And (PictTiroJ3.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ3.Left + PictTiroJ3.Width >= Invasores(X).Left) And (PictTiroJ3.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ3.Visible = True) And (Invasores(X).Visible = True) Then
+
+                    PontuacaoPorDegrauJ3()
+
                     Invasores(X).Visible = False 'Invasor atingido fica invisivel
                     PictTiroJ3.Visible = False 'Torna o tiro invisivel
                     ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
-                    PontosJogador3 += 1 'Aumentar pontos para o jogador 1
                 End If
             Next
-            RotinaPontuacaoJ3() 'Chama a rotina da pontuação para mostrar os pontos
         End If
     End Sub
 
@@ -445,13 +455,14 @@
         If JogoPontosNJogadores = 4 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ4.Top + PictTiroJ4.Height >= Invasores(X).Top) And (PictTiroJ4.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ4.Left + PictTiroJ4.Width >= Invasores(X).Left) And (PictTiroJ4.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ4.Visible = True) And (Invasores(X).Visible = True) Then
+
+                    PontuacaoPorDegrauJ4()
+
                     Invasores(X).Visible = False 'Invasor atingido fica invisivel
                     PictTiroJ4.Visible = False 'Torna o tiro invisivel
                     ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
-                    PontosJogador4 += 1 'Aumentar pontos para o jogador 1
                 End If
             Next
-            RotinaPontuacaoJ4() 'Chama a rotina da pontuação para mostrar os pontos
         End If
     End Sub
 
@@ -474,10 +485,12 @@
         If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
             If Pausa = True Then 'Se pausa não estiver ativo
                 TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
+                TimerInvasores.Enabled = True ' Para os invasores de nadar
                 Label1.Visible = False 'Label que diz "Pausa fica visivel"
                 Pausa = False 'Pausa fica ativo
             Else
                 TimerPrincipal.Enabled = False 'O timer volta a funcionar
+                TimerInvasores.Enabled = False 'O timer volta a funcionar
                 Label1.Visible = True 'A laber que diz "Pausa vai desaparecer"
                 Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
             End If
@@ -500,22 +513,26 @@
 
     Sub RotinaPontuacaoJ1()
         'Pontuação
-        Label2.Text = PontosJogador1 * 100 'Escreve o nome do joagador 1 com os pontos
+        PontosJogador1 += PontoPorMorte 'Aumenta a Pontuação do jogador
+        Label2.Text = PontosJogador1 'Escreve o nome do joagador 1 com os pontos
     End Sub
 
     Sub RotinaPontuacaoJ2()
         'Pontuação
-        Label4.Text = PontosJogador2 * 100 'Escreve o nome do joagador 2 com os pontos
+        PontosJogador2 += PontoPorMorte 'Aumenta a Pontuação do jogador
+        Label4.Text = PontosJogador2 'Escreve o nome do joagador 2 com os pontos
     End Sub
 
     Sub RotinaPontuacaoJ3()
         'Pontuação
-        Label5.Text = PontosJogador3 * 100 'Escreve o nome do joagador 3 com os pontos
+        PontosJogador3 += PontoPorMorte 'Aumenta a Pontuação do jogador
+        Label5.Text = PontosJogador3 'Escreve os pontos
     End Sub
 
     Sub RotinaPontuacaoJ4()
         'Pontuação
-        Label6.Text = PontosJogador4 * 100 'Escreve o nome do joagador 4 com os pontos
+        PontosJogador4 += PontoPorMorte 'Aumenta a Pontuação do jogador
+        Label6.Text = PontosJogador4 'Escreve os pontos
     End Sub
 
     Sub TemporalizadorDeJogo()
@@ -523,4 +540,139 @@
         TempoPartida += 1 'Aumenta o tempo jogado
         Label3.Text = "Tempo: " & TempoPartida & " Ms" 'Mostra o tempo jogado em milissegundos
     End Sub
+
+    Sub PontuacaoPorDegrauJ1()
+
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            RotinaPontuacaoJ1() 'Chama a rotina da pontuação para mostrar os pontos
+        End If
+    End Sub
+
+    Sub PontuacaoPorDegrauJ2()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            RotinaPontuacaoJ2()
+        End If
+    End Sub
+
+    Sub PontuacaoPorDegrauJ3()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            RotinaPontuacaoJ3()
+        End If
+    End Sub
+
+    Sub PontuacaoPorDegrauJ4()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            RotinaPontuacaoJ4()
+        End If
+    End Sub
+
+    Private Sub TimerInvasores_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerInvasores.Tick
+        'timer que move os invasores
+        MoverInvasor()
+    End Sub
+
 End Class
