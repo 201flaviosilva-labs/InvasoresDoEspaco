@@ -1,4 +1,4 @@
-﻿Public Class Invasores
+﻿Public Class Jogo_Rapido
     Dim JogadorDireita As Boolean 'Define o movimento do jogador ir para a Direira
     Dim JogadorEsquerda As Boolean 'Define o movimento do jogador ir para a Esquerda
     Dim VelocidadeJogador As Integer 'Define a velocidade do jogador
@@ -9,7 +9,7 @@
     Dim InvasorDireita(NumDeInvasores) As Boolean 'Define o movimento dos invasores neste caso para a direita
     Dim Invasores(NumDeInvasores) As PictureBox 'Cria uma PictureBox para cada um dos Invasores que serão criados
     Dim X As Integer 'X = Counter
-    Dim TiroCair As Integer ' Contador de número de Invasores mortos
+    Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
     Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
     'Pontuações e temporalizador
     Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
@@ -22,7 +22,7 @@
         MoverJogador()
         MoverTiro()
         MoverInvasor()
-        VerTiro()
+        MatarInavasor()
         GameOver()
         RotinaPontuacao()
     End Sub
@@ -106,7 +106,7 @@
         TempoPartida = 0
         NInvasoresMortos = 0
         VelocidadeInvasor = 3
-        TiroCair = 0
+        ContadorNumeroInvasoresMortos = 0
         JogadorDireita = False
         JogadorEsquerda = False
         TimerPrincipal.Enabled = True
@@ -163,21 +163,21 @@
         Next
 
         'Vitória
-        If TiroCair = NumDeInvasores Then 'Se a pontuação foi igual ao número de invasores "Vitória"
+        If ContadorNumeroInvasoresMortos = NumDeInvasores Then 'Se a pontuação foi igual ao número de invasores "Vitória"
             TimerPrincipal.Enabled = False 'Timer parar
             MsgBox("A Terra está Salva") 'Informar que a terra foi salva e que venceu
             NovoJogo() 'Perguntar se quer começar de novo
         End If
     End Sub
 
-    Private Sub VerTiro()
+    Private Sub MatarInavasor()
         'Rotina da morte do Invasor
         For Me.X = 1 To NumDeInvasores
             If (PictTiro.Top + PictTiro.Height >= Invasores(X).Top) And (PictTiro.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiro.Left + PictTiro.Width >= Invasores(X).Left) And (PictTiro.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiro.Visible = True) And (Invasores(X).Visible = True) Then
                 Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiro.Visible = False 'Torna o tiro invisivel
-                TiroCair += 1 'Contador de Invasores Mortos
-                NInvasoresMortos = TiroCair
+                ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
+                NInvasoresMortos = ContadorNumeroInvasoresMortos
             End If
         Next
         RotinaPontuacao() 'Chama a rotina da pontuação para mostrar os pontos

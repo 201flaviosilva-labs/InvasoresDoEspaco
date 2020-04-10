@@ -72,6 +72,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Jogo_Rapido.Designer.vb">
+      <DependentUpon>Jogo_Rapido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Jogo_Rapido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicial.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -85,10 +91,11 @@
     <Compile Include="Instrocoes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Invasores.Designer.vb">
-      <DependentUpon>Invasores.vb</DependentUpon>
+    <Compile Include="Module1.vb" />
+    <Compile Include="JogoAPontosJvJ.Designer.vb">
+      <DependentUpon>JogoAPontosJvJ.vb</DependentUpon>
     </Compile>
-    <Compile Include="Invasores.vb">
+    <Compile Include="JogoAPontosJvJ.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -108,14 +115,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Jogo_Rapido.resx">
+      <DependentUpon>Jogo_Rapido.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Instrocoes.resx">
       <DependentUpon>Instrocoes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invasores.resx">
-      <DependentUpon>Invasores.vb</DependentUpon>
+    <EmbeddedResource Include="JogoAPontosJvJ.resx">
+      <DependentUpon>JogoAPontosJvJ.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
