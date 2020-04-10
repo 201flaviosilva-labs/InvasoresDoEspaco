@@ -29,6 +29,7 @@ Partial Class Instrocoes
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -108,11 +109,22 @@ Partial Class Instrocoes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Jogo Rápido/Campanha"
         '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Blue
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(252, 29)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(278, 98)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "O tempo é contado em milissegundos, ou seja: 1000 milissegundos = 1 segundo"
+        '
         'Instrocoes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 377)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Instrocoes"
@@ -128,4 +140,5 @@ Partial Class Instrocoes
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -13,6 +13,7 @@
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        opcoes.show()
+        Button7.Visible = True
+        Button8.Visible = True
     End Sub
 End Class

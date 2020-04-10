@@ -1,18 +1,20 @@
 ﻿Public Class Invasores
-    Dim JogadorDireita As Boolean
-    Dim JogadorEsquerda As Boolean
-    Dim VelocidadeJogador As Integer = VelocidadeJogadorAlteravel
-    Dim VelocidadeTiro As Integer = VelociadeTiroAlteravel
-    Dim VelocidadeInvasor As Integer = VelocidadeInvasoresAlteravel
-    Dim IvasorCair As Integer = 50
-    Dim NumDeInvasores As Integer = VelocidadeNumeroInvasoresAlteravel ' Escrever quantos invasores pertendo que sejam aparecidos na tela
-    Dim InvasorDireita(NumDeInvasores) As Boolean
-    Dim Invasores(NumDeInvasores) As PictureBox
-    Dim X As Integer 'X =Counter
-    Dim TiroCair As Integer
-    Dim Pausa As Boolean = False
-    Dim NInvasoresMortos As Integer = 0
-    Dim TempoPartida As Integer = 0
+    Dim JogadorDireita As Boolean 'Define o movimento do jogador ir para a Direira
+    Dim JogadorEsquerda As Boolean 'Define o movimento do jogador ir para a Esquerda
+    Dim VelocidadeJogador As Integer 'Define a velocidade do jogador
+    Dim VelocidadeTiro As Integer 'Define a velocidade do tiro do jogador
+    Dim VelocidadeInvasor As Integer 'Define a velocidade de deslocação dos invasores
+    Dim IvasorCair As Integer = 50 'Define o degrau que os invasores vão cai em realação ao top
+    Const NumDeInvasores As Integer = 30 ' Escrever quantos invasores pertendo que sejam aparecidos na tela
+    Dim InvasorDireita(NumDeInvasores) As Boolean 'Define o movimento dos invasores neste caso para a direita
+    Dim Invasores(NumDeInvasores) As PictureBox 'Cria uma PictureBox para cada um dos Invasores que serão criados
+    Dim X As Integer 'X = Counter
+    Dim TiroCair As Integer ' Contador de número de Invasores mortos
+    Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
+    'Pontuações e temporalizador
+    Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
+    Dim NInvasoresMortos As Integer = 0 'Diz o número de invasores mortos
+    Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
         'Timer 1 temporalizador
@@ -40,14 +42,12 @@
             JogadorDireita = False 'Bloqueia a ida para a Direita
         End If
 
-        'Espaço - Tiro
+        'Espaço ou W - Tiro
         'Se o espaço for permido e o tiro visiver então
-        If e.KeyValue = Keys.Space And PictTiro.Visible = False Then
+        If ((e.KeyValue = Keys.Space Or e.KeyValue = Keys.W) And (PictTiro.Visible = False)) Then
             PictTiro.Visible = True 'Torna o tiro visivel
-            'A picterbox do tiro vai ter com o topo da nave do jogardor
-            PictTiro.Top = NaveJogador.Top
-            'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
-            PictTiro.Left = NaveJogador.Left + (NaveJogador.Width / 2) - (PictTiro.Width / 2)
+            PictTiro.Top = NaveJogador.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
+            PictTiro.Left = NaveJogador.Left + (NaveJogador.Width / 2) - (PictTiro.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
         End If
     End Sub
 
@@ -87,8 +87,8 @@
     End Sub
     Private Sub OpcoesGeral()
         'Opções de tudo
-        VelocidadeJogador = VelocidadeJogadorAlteravel 'Velocidade jogador
-        VelocidadeTiro = VelociadeTiroAlteravel 'Velocidade  Tiro
+        VelocidadeJogador = 3 'Velocidade jogador
+        VelocidadeTiro = 10 'Velocidade  Tiro
 
         'Para todos os invasores faz isto
         For Me.X = 1 To NumDeInvasores
@@ -103,13 +103,15 @@
         IvasorCair = 50 'Indicação quanto o invasor deve sair na tela
 
         'Começar de novo
+        TempoPartida = 0
         NInvasoresMortos = 0
-        VelocidadeInvasor = VelocidadeInvasoresAlteravel
+        VelocidadeInvasor = 3
         TiroCair = 0
         JogadorDireita = False
         JogadorEsquerda = False
         TimerPrincipal.Enabled = True
-        Label2.Text = NInvasoresMortos
+        RotinaPontuacao()
+        TemporalizadorDeJogo()
     End Sub
 
     Private Sub MoverTiro()
@@ -169,15 +171,16 @@
     End Sub
 
     Private Sub VerTiro()
+        'Rotina da morte do Invasor
         For Me.X = 1 To NumDeInvasores
             If (PictTiro.Top + PictTiro.Height >= Invasores(X).Top) And (PictTiro.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiro.Left + PictTiro.Width >= Invasores(X).Left) And (PictTiro.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiro.Visible = True) And (Invasores(X).Visible = True) Then
-                Invasores(X).Visible = False
-                PictTiro.Visible = False
-                TiroCair += 1
+                Invasores(X).Visible = False 'Invasor atingido fica invisivel
+                PictTiro.Visible = False 'Torna o tiro invisivel
+                TiroCair += 1 'Contador de Invasores Mortos
                 NInvasoresMortos = TiroCair
-                Label2.Text = NInvasoresMortos 'Mostrar os pontos
             End If
         Next
+        RotinaPontuacao() 'Chama a rotina da pontuação para mostrar os pontos
     End Sub
 
     Private Sub OpcoesInvasores()
@@ -216,21 +219,22 @@
 
     Private Sub NovoJogo()
         Dim jogarNovamente = MsgBox("Queres jogar de novo?", MsgBoxStyle.YesNo) 'Cria variabel que vai receber uma mensagagembox de sim ou não
-        If jogarNovamente = MsgBoxResult.Yes Then 'se o resultado for sim
+        If jogarNovamente = MsgBoxResult.Yes Then 'se o resultado for "sim"
             OpcoesGeral() 'Começa de novo
-        Else 'Se receber não
+        Else 'Se receber "não"
             Me.Close() 'Fecha o formulário
         End If
     End Sub
 
     Sub RotinaPontuacao()
         'Pontuação
-
+        Pontos = NInvasoresMortos * 100
+        Label2.Text = "Pontos: " & Pontos
     End Sub
 
     Sub TemporalizadorDeJogo()
         'contabiliza o tempo de jogo jogado
         TempoPartida += 1 'Aumenta o tempo jogado
-        Label3.Text = TempoPartida 'Mostra o tempo jogado
+        Label3.Text = "Tempo: " & TempoPartida & " Ms" 'Mostra o tempo jogado em milissegundos
     End Sub
 End Class
