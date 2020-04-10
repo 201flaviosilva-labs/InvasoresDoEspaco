@@ -29,24 +29,28 @@ Partial Class Opcoes
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(145, 12)
+        Me.Button3.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(227, 101)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 46)
+        Me.Button3.Size = New System.Drawing.Size(70, 30)
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "Estatisticas"
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'Button2
         '
+        Me.Button2.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(12, 12)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(127, 46)
+        Me.Button2.Size = New System.Drawing.Size(267, 46)
         Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Instroções / Regras"
+        Me.Button2.Text = "Instruções / Regras"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
+        Me.Button1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(12, 64)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(267, 46)

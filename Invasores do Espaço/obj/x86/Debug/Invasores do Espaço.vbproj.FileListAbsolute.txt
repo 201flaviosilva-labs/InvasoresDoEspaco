@@ -1,159 +1,162 @@
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Form1.resources
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/AppData/Local/Temporary Projects/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Invasores.resources
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Invasores.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Fazidos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Invasores.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Invasores do Espaço(Cocluir)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Nova pasta/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Nova pasta/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Nova pasta/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi_000/Desktop/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.JogoAPontosJvJ.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.JogoAPontosJvJ.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi_000/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço - (Varios tipos de inimigos)/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Multijogador.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Deathmatch.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.OpcoesDeathmatch.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_PvE.resources
-C:/Users/flavi_000/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.DeathmatchEscolhaNave.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.DeathmatchEscolhaNave.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Deathmatch.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Multijogador.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_PvE.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.OpcoesDeathmatch.resources
-C:/Users/flavi/Desktop/Fazendos/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.DeathmatchEscolhaNave.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Deathmatch.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Multijogador.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_PvE.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.OpcoesDeathmatch.resources
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-C:/Users/flavi/Desktop/Fazendos (PAP)/Invasores do Espaço/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Campanha.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Campanha.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.DeathmatchEscolhaNave.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Deathmatch.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Multijogador.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_PvE.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.OpcoesDeathmatch.resources
-C:/Users/flavi/Desktop/Fazidos/0. Back Up/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.Cache
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.exe
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.pdb
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/bin/Debug/Invasores do Espaço.xml
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbprojAssemblyReference.cache
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Campanha.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.DeathmatchEscolhaNave.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Deathmatch.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_Rapido.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Inicial.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Multijogador.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Instrocoes.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Jogo_PvE.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Resources.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.Opcoes.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores_do_Espaço.OpcoesDeathmatch.resources
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.GenerateResource.cache
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.vbproj.CoreCompileInputs.cache
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.exe
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.xml
-/Users/flaviosilva/Dropbox/Space Invaders/Invasores do Espaço 12 - Campanha e Desenhos/Invasores do Espaço/obj/x86/Debug/Invasores do Espaço.pdb
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Form1.resources
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\AppData\Local\Temporary Projects\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Invasores.resources
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Invasores.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Fazidos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Invasores.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Invasores do Espaço(Cocluir)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Nova pasta\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Nova pasta\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Nova pasta\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi_000\Desktop\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.JogoAPontosJvJ.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.JogoAPontosJvJ.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi_000\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço - (Varios tipos de inimigos)\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Multijogador.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Deathmatch.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.OpcoesDeathmatch.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_PvE.resources
+C:\Users\flavi_000\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.DeathmatchEscolhaNave.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.DeathmatchEscolhaNave.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Deathmatch.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Multijogador.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_PvE.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.OpcoesDeathmatch.resources
+C:\Users\flavi\Desktop\Fazendos\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.DeathmatchEscolhaNave.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Deathmatch.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Multijogador.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_PvE.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.OpcoesDeathmatch.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Campanha.resources
+C:\Users\flavi\Desktop\Fazendos (PAP)\Invasores do Espaço\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Original.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Campanha.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.DeathmatchEscolhaNave.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Deathmatch.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Multijogador.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_PvE.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.OpcoesDeathmatch.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Original.resources
+C:\Users\flavi\Desktop\Fazidos\0. Back Up\Space Invaders\Invasores do Espaço 13 - Original\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.Cache
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\bin\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\bin\Debug\Invasores do Espaço.pdb
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\bin\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbprojAssemblyReference.cache
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Campanha.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.DeathmatchEscolhaNave.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Deathmatch.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_Rapido.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Inicial.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Multijogador.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Instrocoes.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Jogo_PvE.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Resources.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Opcoes.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.OpcoesDeathmatch.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores_do_Espaço.Original.resources
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.GenerateResource.cache
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.vbproj.CoreCompileInputs.cache
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.exe
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.xml
+C:\Users\flavi\Dropbox\Space Invaders\Invasores do Espaço 13 - Original ~ PAP\Invasores do Espaço\obj\x86\Debug\Invasores do Espaço.pdb

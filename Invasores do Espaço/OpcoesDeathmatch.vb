@@ -47,7 +47,7 @@
                 TempoDeJogoDefinidoTvT = 120  'Jogo acaba aos 120 000 Milisegundos = 2 Minutos
             End If
         End If
-        DeathmatchEscolhaNave.Show()
+        Jogo_Deathmatch.Show()
         ' Jogo_Deathmatch.Show()
     End Sub
 

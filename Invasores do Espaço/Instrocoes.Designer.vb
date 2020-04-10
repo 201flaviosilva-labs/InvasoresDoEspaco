@@ -58,6 +58,7 @@ Partial Class Instrocoes
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -171,6 +172,7 @@ Partial Class Instrocoes
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.LightPink
+        Me.GroupBox2.Controls.Add(Me.Label33)
         Me.GroupBox2.Controls.Add(Me.Label29)
         Me.GroupBox2.Controls.Add(Me.Label30)
         Me.GroupBox2.Controls.Add(Me.Label31)
@@ -502,6 +504,20 @@ Partial Class Instrocoes
         Me.Label11.TabIndex = 3
         Me.Label11.Text = "W -> Disparar"
         '
+        'Label33
+        '
+        Me.Label33.BackColor = System.Drawing.Color.Magenta
+        Me.Label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label33.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(775, 80)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(137, 95)
+        Me.Label33.TabIndex = 27
+        Me.Label33.Text = "O jogador 5 joga com os números do teclado da direita, não te esqueças de ativar " & _
+            "o ""num ik"""
+        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Instrocoes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
@@ -559,4 +575,5 @@ Partial Class Instrocoes
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label33 As System.Windows.Forms.Label
 End Class

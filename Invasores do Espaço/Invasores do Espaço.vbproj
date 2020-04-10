@@ -164,6 +164,12 @@
     <Compile Include="OpcoesDeathmatch.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Original.Designer.vb">
+      <DependentUpon>Original.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Original.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Campanha.resx">
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpcoesDeathmatch.resx">
       <DependentUpon>OpcoesDeathmatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Original.resx">
+      <DependentUpon>Original.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
