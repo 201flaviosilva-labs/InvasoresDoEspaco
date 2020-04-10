@@ -3,31 +3,28 @@
     Dim JogadorDireita As Boolean 'Define o movimento do jogador ir para a Direira
     Dim JogadorEsquerda As Boolean 'Define o movimento do jogador ir para a Esquerda
     Dim RatoX As Integer 'Deteta a localização no eixo do X do Rato
-    Dim VelocidadeJogador As Integer = 3 'Define a velocidade do jogador
-    Dim VelocidadeTiro As Integer = 20 'Define a velocidade do tiro do jogador
-    Dim VelocidadeInvasor As Integer = 3 'Define a velocidade de deslocação dos invasores
+    Dim VelocidadeJogador As Byte = 3 'Define a velocidade do jogador
+    Dim VelocidadeTiro As Byte = 20 'Define a velocidade do tiro do jogador
+    Dim VelocidadeInvasor As Byte = 3 'Define a velocidade de deslocação dos invasores
     Dim IvasorCair As Integer = 50 'Define o degrau que os invasores vão cai em realação ao top
     Const NumDeInvasores As Integer = 30 ' Escrever quantos invasores pertendo que sejam aparecidos na tela
     Dim InvasorDireita(NumDeInvasores) As Boolean 'Define o movimento dos invasores neste caso para a direita
     Dim Invasores(NumDeInvasores) As PictureBox 'Cria uma PictureBox para cada um dos Invasores que serão criados
-    Dim X As Integer 'X = Counter
+    Dim X As Integer 'X = Counter, usasada para contar os insvasores
     Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
-
     Dim RandomVidaInvasor(NumDeInvasores) As Integer ' Define o número de tiros que um invasor tem que levar para morrer
     Dim NumeroVidasInvasoresMortas As Integer = 0 'Diz quantas Vidas de invasores há que foram Eliminadas
     Dim SomaDasVidasInvasores As Integer ' Soma de todas as vidas dos invasores
 
     '-------------------
-    Dim PrimeiroInvasor As Integer
-    Dim InvasoresCodigo(NumDeInvasores) As Integer
+    Dim CabecaInvasor As Integer
+    Dim InvasoresID(NumDeInvasores) As Integer
     '--------------------------
 
     'Pontuações e temporalizador
     Dim AlturadaMorte As Double = 0 'Recebe a altura da morte do invasor
-    Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
     Dim PontosJogador As Double = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
-    Dim PontoPorMorte As Double 'Contabiliza o POnto da morte
     Dim ContadorNumeroInvasoresMortos As Integer = 0 ' Contador de número de Invasores mortos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
@@ -38,6 +35,11 @@
         MatarInavasor()
         GameOver()
         PrimeiroInvasorRotina()
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerInvasor.Tick
+        'timer dos invasores
+        MoverInvasor()
     End Sub
 
     Private Sub Invasores_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
@@ -100,11 +102,11 @@
     Private Sub Invasores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Loading Inicial
         OpcoesGeral()
-        If JogoRapridoRato = True Then 'Se o jogo com o rato estiver ativo então
-            TimerJogadorRato.Enabled = True 'O timer que move o jogar está ativo
-        Else
-            TimerJogadorRato.Enabled = False ' Se não O timer que move o jogar está inativo
-        End If
+        'If JogoRapridoRato = True Then 'Se o jogo com o rato estiver ativo então
+        'TimerJogadorRato.Enabled = True 'O timer que move o jogar está ativo
+        ' Else
+        'TimerJogadorRato.Enabled = False ' Se não O timer que move o jogar está inativo
+        'End If
     End Sub
 
     Private Sub OpcoesGeral()
@@ -127,7 +129,6 @@
         TimerPrincipal.Enabled = True
         TimerInvasor.Enabled = True
         TempoPartida = 0
-        PontoPorMorte = 0
         ContadorNumeroInvasoresMortos = 0
         PontosJogador = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
         NumeroVidasInvasoresMortas = 0
@@ -211,25 +212,40 @@
                 End If
                 RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
+
+                If X = 1 Then
+                    Label4.Text = "Cabeça Invasor"
+                    'InvasoresID(X) -= 1
+                    'CabecaInvasor = InvasoresID(X)
+                Else
+                    Label4.Text = "Não Cabeça Invasor"
+                    ' CabecaInvasor = InvasoresID(X)
+                End If
+                ' Label4.Text = CabecaInvasor
+
+
                 PictTiro.Visible = False 'Torna o tiro invisivel
             End If
-        Next
+        Next 'end for
     End Sub
 
     Private Sub PrimeiroInvasorRotina()
-        '----------------
-        For Me.X = 1 To NumDeInvasores
-            If Invasores(X).Visible = False Then
-                InvasoresCodigo(X) += 1
-                PrimeiroInvasor = InvasoresCodigo(X)
-            Else
-                PrimeiroInvasor = InvasoresCodigo(X)
-            End If
-            ' Label4.Text = PrimeiroInvasor
-        Next
+        '    '----------------
+        '    For Me.X = NumDeInvasores To 1
+
+        '        If Invasores(X).Visible = False Then
+        '            InvasoresID(X) -= 1
+        '            PrimeiroInvasor = InvasoresID(X)
+        '        Else
+        '            PrimeiroInvasor = InvasoresID(X)
+        '        End If
+        '        Label4.Text = PrimeiroInvasor
+        '    Next
     End Sub
 
     Private Sub MortePorDegrauSubRotina()
+        Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
+
         If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
             AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
             'Degrau = fila
@@ -248,7 +264,8 @@
             ElseIf AlturadaMorte <= 300 Then 'Setima Fila
                 DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
             End If
-            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+
+            PontosJogador += 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
             ' 1 - 1 200
             ' 2 - 600
             ' 3 - 300
@@ -256,7 +273,7 @@
             ' 5 - 150
             ' 6 - 120
             ' 7 - 100
-            PontosJogador += PontoPorMorte 'Aumenta a Pontuação do jogador
+
             PontosJogador += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
             ' 1 - 100 - +100
             ' 2 - 300 - +200
@@ -300,13 +317,13 @@
             If Pausa = True Then 'Se pausa não estiver ativo
                 TimerPrincipal.Enabled = True ' Otimer volta a funcionar
                 TimerInvasor.Enabled = True ' Otimer volta a funcionar
-                TimerJogadorRato.Enabled = True ' Otimer volta a funcionar
+                ' TimerJogadorRato.Enabled = True ' Otimer volta a funcionar
                 Label1.Visible = False 'Label que diz "Pausa fica invisivel"
                 Pausa = False 'Pausa fica desativo
             Else
                 TimerPrincipal.Enabled = False 'Parar o timer que manda para tudo, daí ser uma pausa
                 TimerInvasor.Enabled = False ' Para os invasores de nadar
-                TimerJogadorRato.Enabled = False ' parar o timer do jogador do rato
+                ' TimerJogadorRato.Enabled = False ' parar o timer do jogador do rato
                 Label1.Visible = True 'A laber que diz "Pausa" vai aparecer"
                 Pausa = True 'Pausa fica ativo
             End If
@@ -341,11 +358,6 @@
         'contabiliza o tempo de jogo jogado
         TempoPartida += 1 'Aumenta o tempo jogado
         Label3.Text = "Tempo: " & TempoPartida & " Ms" 'Mostra o tempo jogado em milissegundos
-    End Sub
-
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerInvasor.Tick
-        'timer do invasor
-        MoverInvasor()
     End Sub
 
     Private Sub TimerJogadorRato_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerJogadorRato.Tick

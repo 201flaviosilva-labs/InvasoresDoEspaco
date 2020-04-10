@@ -15,6 +15,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -87,18 +87,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campanha.Designer.vb">
-      <DependentUpon>Campanha.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Campanha.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeathmatchEscolhaNave.Designer.vb">
-      <DependentUpon>DeathmatchEscolhaNave.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DeathmatchEscolhaNave.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Estatisticas.vb" />
     <Compile Include="Jogo_Deathmatch.Designer.vb">
       <DependentUpon>Jogo_Deathmatch.vb</DependentUpon>
     </Compile>
@@ -118,16 +107,28 @@
       <DependentUpon>Inicial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Jogo_ModoCamanha.Designer.vb">
+      <DependentUpon>Jogo_ModoCamanha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Jogo_ModoCamanha.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Multijogador.Designer.vb">
       <DependentUpon>Multijogador.vb</DependentUpon>
     </Compile>
     <Compile Include="Multijogador.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Instrocoes.Designer.vb">
-      <DependentUpon>Instrocoes.vb</DependentUpon>
+    <Compile Include="OpcoesJogoRapido.Designer.vb">
+      <DependentUpon>OpcoesJogoRapido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Instrocoes.vb">
+    <Compile Include="OpcoesJogoRapido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Op_Instrocoes.Designer.vb">
+      <DependentUpon>Op_Instrocoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Op_Instrocoes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Condicoes.vb" />
@@ -152,10 +153,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Opcoes.Designer.vb">
-      <DependentUpon>Opcoes.vb</DependentUpon>
+    <Compile Include="Opcoes_Geral.Designer.vb">
+      <DependentUpon>Opcoes_Geral.vb</DependentUpon>
     </Compile>
-    <Compile Include="Opcoes.vb">
+    <Compile Include="Opcoes_Geral.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OpcoesDeathmatch.Designer.vb">
@@ -164,20 +165,20 @@
     <Compile Include="OpcoesDeathmatch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Original.Designer.vb">
-      <DependentUpon>Original.vb</DependentUpon>
+    <Compile Include="Jogo_Original.Designer.vb">
+      <DependentUpon>Jogo_Original.vb</DependentUpon>
     </Compile>
-    <Compile Include="Original.vb">
+    <Compile Include="Jogo_Original.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Op_Regras.Designer.vb">
+      <DependentUpon>Op_Regras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Op_Regras.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Campanha.resx">
-      <DependentUpon>Campanha.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeathmatchEscolhaNave.resx">
-      <DependentUpon>DeathmatchEscolhaNave.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Jogo_Deathmatch.resx">
       <DependentUpon>Jogo_Deathmatch.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,11 +188,17 @@
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Jogo_ModoCamanha.resx">
+      <DependentUpon>Jogo_ModoCamanha.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Multijogador.resx">
       <DependentUpon>Multijogador.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Instrocoes.resx">
-      <DependentUpon>Instrocoes.vb</DependentUpon>
+    <EmbeddedResource Include="OpcoesJogoRapido.resx">
+      <DependentUpon>OpcoesJogoRapido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Op_Instrocoes.resx">
+      <DependentUpon>Op_Instrocoes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jogo_PvE.resx">
       <DependentUpon>Jogo_PvE.vb</DependentUpon>
@@ -202,14 +209,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Opcoes.resx">
-      <DependentUpon>Opcoes.vb</DependentUpon>
+    <EmbeddedResource Include="Opcoes_Geral.resx">
+      <DependentUpon>Opcoes_Geral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpcoesDeathmatch.resx">
       <DependentUpon>OpcoesDeathmatch.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Original.resx">
-      <DependentUpon>Original.vb</DependentUpon>
+    <EmbeddedResource Include="Jogo_Original.resx">
+      <DependentUpon>Jogo_Original.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Op_Regras.resx">
+      <DependentUpon>Op_Regras.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -222,9 +232,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SpaceInvadersShip.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -247,9 +254,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Invasor3.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Invasor2.bmp" />

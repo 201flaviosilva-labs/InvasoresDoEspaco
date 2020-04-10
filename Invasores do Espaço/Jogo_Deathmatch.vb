@@ -175,9 +175,11 @@
 
         If JogoNumJogadoresMultijogador >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
             PicJogador3.Visible = True 'Torna a pic do jogador visivel
+            Label10.Visible = True ' Torna Visivel o protetor do jogador
         End If
-        If JogoNumJogadoresMultijogador = 4 Then
+        If JogoNumJogadoresMultijogador >= 4 Then
             PicJogador4.Visible = True
+            Label11.Visible = True
         End If
     End Sub
 
@@ -228,7 +230,16 @@
             PicJogador4.Visible = True
         End If
     End Sub
-
+    Private Sub ProtetorEquipaCima2()
+        'Tiro do jogador 1
+        'Portetor Azul
+        If (PictTiroJ1.Top + PictTiroJ1.Height >= Label11.Top) And (PictTiroJ1.Top <= Label11.Top + Label11.Height) And (PictTiroJ1.Left + PictTiroJ1.Width >= Label11.Left) And (PictTiroJ1.Left <= Label11.Left + Label11.Width) And (PictTiroJ1.Visible = True) And (Label11.Visible = True) Then
+            PictTiroJ1.Visible = False 'Torna o tiro invisivel
+            Label11.Visible = False 'Jogador fica Invisivel
+            'TempoParaAparecerJ(2) = TempoPartida + VariavelTempoAparecer 'O tempo que falta para ele aparecer é o tempo da partida mais x
+            'ContagemTempoAparecer(2) = VariavelTempoAparecer 'Tempo até voltar a aparecer o portetor
+        End If
+    End Sub
     Private Sub MatarEquipa2()
         'Rotina da morte do jogador da equipa de cima
         'Tiro do jogador 1

@@ -28,9 +28,10 @@ Partial Class Jogo_Rapido
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TimerInvasor = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerJogadorRato = New System.Windows.Forms.Timer(Me.components)
         Me.PictTiro = New System.Windows.Forms.PictureBox()
         Me.NaveJogador = New System.Windows.Forms.PictureBox()
+        Me.TimerJogadorRato = New System.Windows.Forms.Timer(Me.components)
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NaveJogador, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,11 +82,6 @@ Partial Class Jogo_Rapido
         Me.TimerInvasor.Enabled = True
         Me.TimerInvasor.Interval = 1
         '
-        'TimerJogadorRato
-        '
-        Me.TimerJogadorRato.Enabled = True
-        Me.TimerJogadorRato.Interval = 1
-        '
         'PictTiro
         '
         Me.PictTiro.BackColor = System.Drawing.Color.Red
@@ -105,12 +101,29 @@ Partial Class Jogo_Rapido
         Me.NaveJogador.TabIndex = 0
         Me.NaveJogador.TabStop = False
         '
+        'TimerJogadorRato
+        '
+        Me.TimerJogadorRato.Interval = 1
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(412, 385)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(200, 26)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Pontos"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Jogo_Rapido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(624, 441)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -134,4 +147,5 @@ Partial Class Jogo_Rapido
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TimerInvasor As System.Windows.Forms.Timer
     Friend WithEvents TimerJogadorRato As System.Windows.Forms.Timer
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

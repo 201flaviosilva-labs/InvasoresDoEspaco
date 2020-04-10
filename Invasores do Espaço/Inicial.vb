@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        Opcoes.Show()
+        Opcoes_Geral.Show()
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
@@ -42,22 +42,6 @@
             JogoNumJogadoresMultijogador = 4
             Jogo_PvE.Show()
         End If
-    End Sub
-
-    Sub SubDicas()
-        Randomize()
-        DicaRandom = Int(30 * Rnd() + 1) 'Cria um número aleatório inteiro
-        Select Case DicaRandom
-            Case 1
-                DicaTexto = "!"
-            Case 2
-                DicaTexto = "!!"
-            Case 3
-                DicaTexto = "!!!"
-            Case Else
-                DicaTexto = "Clica em 'ajuda' sempre que estiveres com alguma dúvida"
-        End Select
-        Label3.Text = DicaTexto
     End Sub
 
     Private Sub Inicial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -94,10 +78,38 @@
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Campanha.Show()
+        'Campanha - desenvolvimento
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Original.Show()
+        Jogo_Original.Show()
+    End Sub
+
+    Sub SubDicas()
+        Randomize()
+        DicaRandom = Int(30 * Rnd() + 1) 'Cria um número aleatório inteiro
+        Select Case DicaRandom
+            Case 1
+                DicaTexto = "Usa o 'W' para Disparar"
+            Case 2
+                DicaTexto = "A tecla 'A' andas para a Esquerda"
+            Case 3
+                DicaTexto = "A tecla 'D' andas para a Direita"
+            Case 4
+                DicaTexto = "Clica em 'ajuda' sempre que estiveres com alguma dúvida"
+            Case 5
+                DicaTexto = "Jogo Rápido - O Objetivo é matar todos os invasores antes que chegem á terra"
+            Case 6
+                DicaTexto = "Os invasores Verdes é necessário apenas 1 para morrer"
+            Case 7
+                DicaTexto = "Os invasores Vermelhos é necessário 2 tiros para morrer"
+            Case 8
+                DicaTexto = "Jogo Rápido - São apenas 30 invasores"
+            Case 9
+                DicaTexto = "Campnha - São 10 niveis"
+            Case Else
+                DicaTexto = "Error"
+        End Select
+        Label3.Text = DicaTexto
     End Sub
 End Class

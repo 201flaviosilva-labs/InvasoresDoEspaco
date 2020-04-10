@@ -23,6 +23,7 @@ Partial Class Inicial
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicial))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -73,16 +74,17 @@ Partial Class Inicial
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Consolas", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.Location = New System.Drawing.Point(115, 49)
+        Me.Label1.Location = New System.Drawing.Point(18, 55)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(399, 43)
+        Me.Label1.Size = New System.Drawing.Size(499, 43)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Invasores do Espaço"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -93,7 +95,6 @@ Partial Class Inicial
         Me.Label2.Size = New System.Drawing.Size(45, 19)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Demo"
-        Me.Label2.Visible = False
         '
         'Button4
         '
@@ -131,47 +132,45 @@ Partial Class Inicial
         'Button12
         '
         Me.Button12.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button12.Location = New System.Drawing.Point(204, 456)
+        Me.Button12.Location = New System.Drawing.Point(204, 457)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(363, 54)
+        Me.Button12.Size = New System.Drawing.Size(313, 53)
         Me.Button12.TabIndex = 20
         Me.Button12.Text = "Ajuda?"
         Me.Button12.UseVisualStyleBackColor = True
-        Me.Button12.Visible = False
         '
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(224, 178)
+        Me.Label3.Location = New System.Drawing.Point(224, 145)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(366, 193)
+        Me.Label3.Size = New System.Drawing.Size(293, 117)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Dicas"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label3.Visible = False
         '
         'Button13
         '
         Me.Button13.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Location = New System.Drawing.Point(224, 330)
+        Me.Button13.Location = New System.Drawing.Point(269, 270)
         Me.Button13.Margin = New System.Windows.Forms.Padding(4)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(368, 39)
+        Me.Button13.Size = New System.Drawing.Size(211, 39)
         Me.Button13.TabIndex = 22
         Me.Button13.Text = "Nova Dica"
         Me.Button13.UseVisualStyleBackColor = True
-        Me.Button13.Visible = False
         '
         'Label4
         '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.BackColor = System.Drawing.Color.Black
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(379, 396)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(269, 404)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(211, 49)
         Me.Label4.TabIndex = 57
@@ -186,7 +185,9 @@ Partial Class Inicial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(602, 548)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(538, 548)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Label3)
@@ -204,7 +205,7 @@ Partial Class Inicial
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inicial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inicial"
+        Me.Text = "Invasores do Espaço"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

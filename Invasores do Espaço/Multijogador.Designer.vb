@@ -130,6 +130,7 @@ Partial Class Multijogador
         Me.Button12.TabIndex = 25
         Me.Button12.Text = "Ajuda?"
         Me.Button12.UseVisualStyleBackColor = True
+        Me.Button12.Visible = False
         '
         'Button4
         '
