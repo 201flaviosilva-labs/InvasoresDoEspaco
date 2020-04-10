@@ -2,6 +2,7 @@
     'Exencial para o jogo
     Dim JogadorDireita As Boolean 'Define o movimento do jogador ir para a Direira
     Dim JogadorEsquerda As Boolean 'Define o movimento do jogador ir para a Esquerda
+    Dim RatoX As Integer 'Deteta a localização no eixo do X do Rato
     Dim VelocidadeJogador As Integer = 3 'Define a velocidade do jogador
     Dim VelocidadeTiro As Integer = 20 'Define a velocidade do tiro do jogador
     Dim VelocidadeInvasor As Integer = 3 'Define a velocidade de deslocação dos invasores
@@ -57,10 +58,14 @@
         'Espaço ou W - Tiro
         'Se o espaço for permido e o tiro visiver então
         If ((e.KeyValue = Keys.Space Or e.KeyValue = Keys.W) And (PictTiro.Visible = False)) Then
-            PictTiro.Visible = True 'Torna o tiro visivel
-            PictTiro.Top = NaveJogador.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
-            PictTiro.Left = NaveJogador.Left + (NaveJogador.Width / 2) - (PictTiro.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
+            DispararTiro()
         End If
+    End Sub
+
+    Private Sub DispararTiro()
+        PictTiro.Visible = True 'Torna o tiro visivel
+        PictTiro.Top = NaveJogador.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
+        PictTiro.Left = NaveJogador.Left + (NaveJogador.Width / 2) - (PictTiro.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
     End Sub
 
     Private Sub MoverJogador()
@@ -95,6 +100,11 @@
     Private Sub Invasores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Loading Inicial
         OpcoesGeral()
+        If JogoRapridoRato = True Then 'Se o jogo com o rato estiver ativo então
+            TimerJogadorRato.Enabled = True 'O timer que move o jogar está ativo
+        Else
+            TimerJogadorRato.Enabled = False ' Se não O timer que move o jogar está inativo
+        End If
     End Sub
 
     Private Sub OpcoesGeral()
@@ -331,4 +341,27 @@
         MoverInvasor()
     End Sub
 
+    Private Sub TimerJogadorRato_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerJogadorRato.Tick
+        'Timer do Rato
+        Dim PicX As Integer = NaveJogador.Location.X ' Deteta a localização do jogador no eixo do X
+        Dim PicY As Integer = NaveJogador.Location.Y ' Deteta a localização do jogador no eixo do Y
+
+        If PicX > RatoX Then 'Se a localização do jogador for menor que a do rato então
+            PicX -= 2 'Anda 2 para a esquerda
+            NaveJogador.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
+        Else
+            PicX += 2 'Anda 2 para a direita
+            NaveJogador.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
+        End If
+    End Sub
+
+    Private Sub Jogo_Rapido_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseMove
+        'Quando o rato mover
+        RatoX = e.X 'Encontra a localização do rato
+    End Sub
+
+    Private Sub Jogo_Rapido_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Click
+        'Ao clicar na tela
+        DispararTiro()
+    End Sub
 End Class

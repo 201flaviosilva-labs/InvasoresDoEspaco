@@ -3,6 +3,13 @@
     Dim DicaRandom As Byte = 1
     Dim DicaTexto As String = ""
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim JogadrComORato = MsgBox("Queres jogar como Rato?", MsgBoxStyle.YesNo) ' Pergunta se quer jogador com o rato ou não
+        If JogadrComORato = MsgBoxResult.Yes Then ' se a escolha tiver sido ism então
+
+            JogoRapridoRato = True 'JOgar com o rato fica disponivel
+        Else
+            JogoRapridoRato = False 'JOgar com o rato fica indisponivel
+        End If
         Jogo_Rapido.Show()
     End Sub
 
