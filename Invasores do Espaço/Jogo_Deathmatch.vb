@@ -24,6 +24,7 @@
         'Timer 1 temporalizador
         MoverJogador()
         MoverTiro()
+        TiroInvisivel()
         MatarEquipa2()
         MatarEquipa1()
         GameOver()
@@ -376,6 +377,23 @@
         End If
     End Sub
 
+    Sub TiroInvisivel()
+        If PicJogador1.Visible = False Then 'Se o jogador estiver invisivel
+            PictTiroJ1.Visible = False 'o Tiro nunca irá aparecer
+        End If
+        If PicJogador2.Visible = False Then
+            PictTiroJ2.Visible = False
+        End If
+        If JogoNumJogadoresMultijogador = 4 Then
+            If PicJogador3.Visible = False Then
+                PictTiroJ3.Visible = False
+            End If
+            If PicJogador4.Visible = False Then
+                PictTiroJ4.Visible = False
+            End If
+        End If
+    End Sub
+
     Private Sub MoverTiro()
         'Jogador 1
         If PictTiroJ1.Visible = True Then 'Se o tiro estiver visivel
@@ -427,7 +445,7 @@
         'Vitória
         If ModoDeJogoDeathmatchPontos = True Then 'Se o modo de jogo for a pontos então
             If JogoNumJogadoresMultijogador = 2 Then 'Se apenas estiver 2 jogadores a jogar
-                If PontosEquipa1 = 2000 Or PontosEquipa2 = 2000 Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
+                If PontosEquipa1 = 1000 Or PontosEquipa2 = 1000 Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
                     TimerPrincipal.Enabled = False 'Para o timer
                     TempoPartidaTimer.Enabled = False 'Para o timer
                     If (PontosEquipa1 > PontosEquipa2) Then
@@ -438,7 +456,7 @@
                     NovoJogo() 'Perguntar se quer começar de novo
                 End If
             Else
-                If PontosEquipa1 = 5000 Or PontosEquipa2 = 5000 Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
+                If PontosEquipa1 = 2000 Or PontosEquipa2 = 2000 Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
                     TimerPrincipal.Enabled = False 'Parar o timer
                     TempoPartidaTimer.Enabled = False 'Para o timer
                     If (PontosEquipa1 > PontosEquipa2) Then
@@ -505,14 +523,17 @@
     End Sub
 
     Private Sub Jogo_Deathmatch_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
+        'Pausa e sair
         'Pausa
         If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
             If Pausa = True Then 'Se pausa não estiver ativo
                 TimerPrincipal.Enabled = True ' Otimer volta a funcionar
+                TempoPartidaTimer.Enabled = True 'Timer que conta o tempo volta a trabalhar
                 Label6.Visible = False 'Label que diz "Pausa" fica invisivel"
                 Pausa = False 'Pausa fica desativo
             Else
                 TimerPrincipal.Enabled = False 'Parar o timer que manda para tudo, daí ser uma pausa
+                TempoPartidaTimer.Enabled = True 'Timer que conta o tempo pára
                 Label6.Visible = True 'A laber que diz "Pausa" vai aparecer"
                 Pausa = True 'Pausa fica ativo
             End If

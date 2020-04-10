@@ -24,64 +24,45 @@ Partial Class Jogo_PvE
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TimerPrincipal = New System.Windows.Forms.Timer(Me.components)
-        Me.PictTiroJ1 = New System.Windows.Forms.PictureBox()
-        Me.PicJogador1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PicJogador2 = New System.Windows.Forms.PictureBox()
-        Me.PictTiroJ2 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictTiroJ3 = New System.Windows.Forms.PictureBox()
-        Me.PicJogador3 = New System.Windows.Forms.PictureBox()
-        Me.PictTiroJ4 = New System.Windows.Forms.PictureBox()
-        Me.PicJogador4 = New System.Windows.Forms.PictureBox()
         Me.TimerInvasores = New System.Windows.Forms.Timer(Me.components)
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.PicJogador5 = New System.Windows.Forms.PictureBox()
-        Me.PicJogador6 = New System.Windows.Forms.PictureBox()
-        Me.PictTiroJ5 = New System.Windows.Forms.PictureBox()
-        Me.PictTiroJ6 = New System.Windows.Forms.PictureBox()
         Me.TimerMoverJogadorRato = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicJogador1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicJogador2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictTiroJ2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictTiroJ3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicJogador3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictTiroJ6 = New System.Windows.Forms.PictureBox()
+        Me.PictTiroJ5 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador6 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador5 = New System.Windows.Forms.PictureBox()
+        Me.PictTiroJ4 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador4 = New System.Windows.Forms.PictureBox()
+        Me.PictTiroJ3 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador3 = New System.Windows.Forms.PictureBox()
+        Me.PictTiroJ2 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador2 = New System.Windows.Forms.PictureBox()
+        Me.PictTiroJ1 = New System.Windows.Forms.PictureBox()
+        Me.PicJogador1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictTiroJ6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictTiroJ5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicJogador6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicJogador5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictTiroJ4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicJogador4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicJogador5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PicJogador6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictTiroJ5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictTiroJ6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictTiroJ3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicJogador3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictTiroJ2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicJogador2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicJogador1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TimerPrincipal
         '
         Me.TimerPrincipal.Interval = 1
-        '
-        'PictTiroJ1
-        '
-        Me.PictTiroJ1.BackColor = System.Drawing.Color.Green
-        Me.PictTiroJ1.Location = New System.Drawing.Point(43, 335)
-        Me.PictTiroJ1.Name = "PictTiroJ1"
-        Me.PictTiroJ1.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiroJ1.TabIndex = 1
-        Me.PictTiroJ1.TabStop = False
-        '
-        'PicJogador1
-        '
-        Me.PicJogador1.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador1.Location = New System.Drawing.Point(27, 361)
-        Me.PicJogador1.Name = "PicJogador1"
-        Me.PicJogador1.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador1.TabIndex = 0
-        Me.PicJogador1.TabStop = False
         '
         'Label1
         '
@@ -119,25 +100,6 @@ Partial Class Jogo_PvE
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Tempo"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PicJogador2
-        '
-        Me.PicJogador2.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador2.Location = New System.Drawing.Point(150, 361)
-        Me.PicJogador2.Name = "PicJogador2"
-        Me.PicJogador2.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador2.TabIndex = 5
-        Me.PicJogador2.TabStop = False
-        '
-        'PictTiroJ2
-        '
-        Me.PictTiroJ2.BackColor = System.Drawing.Color.Red
-        Me.PictTiroJ2.Location = New System.Drawing.Point(169, 335)
-        Me.PictTiroJ2.Name = "PictTiroJ2"
-        Me.PictTiroJ2.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiroJ2.TabIndex = 6
-        Me.PictTiroJ2.TabStop = False
         '
         'Label4
         '
@@ -177,48 +139,6 @@ Partial Class Jogo_PvE
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label6.Visible = False
         '
-        'PictTiroJ3
-        '
-        Me.PictTiroJ3.BackColor = System.Drawing.Color.Yellow
-        Me.PictTiroJ3.Location = New System.Drawing.Point(298, 335)
-        Me.PictTiroJ3.Name = "PictTiroJ3"
-        Me.PictTiroJ3.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiroJ3.TabIndex = 11
-        Me.PictTiroJ3.TabStop = False
-        Me.PictTiroJ3.Visible = False
-        '
-        'PicJogador3
-        '
-        Me.PicJogador3.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador3.Location = New System.Drawing.Point(274, 361)
-        Me.PicJogador3.Name = "PicJogador3"
-        Me.PicJogador3.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador3.TabIndex = 10
-        Me.PicJogador3.TabStop = False
-        Me.PicJogador3.Visible = False
-        '
-        'PictTiroJ4
-        '
-        Me.PictTiroJ4.BackColor = System.Drawing.Color.Blue
-        Me.PictTiroJ4.Location = New System.Drawing.Point(415, 335)
-        Me.PictTiroJ4.Name = "PictTiroJ4"
-        Me.PictTiroJ4.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiroJ4.TabIndex = 13
-        Me.PictTiroJ4.TabStop = False
-        Me.PictTiroJ4.Visible = False
-        '
-        'PicJogador4
-        '
-        Me.PicJogador4.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador4.Location = New System.Drawing.Point(395, 361)
-        Me.PicJogador4.Name = "PicJogador4"
-        Me.PicJogador4.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador4.TabIndex = 12
-        Me.PicJogador4.TabStop = False
-        Me.PicJogador4.Visible = False
-        '
         'TimerInvasores
         '
         Me.TimerInvasores.Enabled = True
@@ -250,37 +170,9 @@ Partial Class Jogo_PvE
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label8.Visible = False
         '
-        'PicJogador5
+        'TimerMoverJogadorRato
         '
-        Me.PicJogador5.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador5.Location = New System.Drawing.Point(506, 361)
-        Me.PicJogador5.Name = "PicJogador5"
-        Me.PicJogador5.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador5.TabIndex = 16
-        Me.PicJogador5.TabStop = False
-        Me.PicJogador5.Visible = False
-        '
-        'PicJogador6
-        '
-        Me.PicJogador6.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.PicJogador6.Location = New System.Drawing.Point(634, 361)
-        Me.PicJogador6.Name = "PicJogador6"
-        Me.PicJogador6.Size = New System.Drawing.Size(50, 50)
-        Me.PicJogador6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicJogador6.TabIndex = 17
-        Me.PicJogador6.TabStop = False
-        Me.PicJogador6.Visible = False
-        '
-        'PictTiroJ5
-        '
-        Me.PictTiroJ5.BackColor = System.Drawing.Color.Magenta
-        Me.PictTiroJ5.Location = New System.Drawing.Point(526, 335)
-        Me.PictTiroJ5.Name = "PictTiroJ5"
-        Me.PictTiroJ5.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiroJ5.TabIndex = 18
-        Me.PictTiroJ5.TabStop = False
-        Me.PictTiroJ5.Visible = False
+        Me.TimerMoverJogadorRato.Interval = 1
         '
         'PictTiroJ6
         '
@@ -292,11 +184,119 @@ Partial Class Jogo_PvE
         Me.PictTiroJ6.TabStop = False
         Me.PictTiroJ6.Visible = False
         '
-        'TimerMoverJogadorRato
+        'PictTiroJ5
         '
-        Me.TimerMoverJogadorRato.Interval = 1
+        Me.PictTiroJ5.BackColor = System.Drawing.Color.Magenta
+        Me.PictTiroJ5.Location = New System.Drawing.Point(526, 335)
+        Me.PictTiroJ5.Name = "PictTiroJ5"
+        Me.PictTiroJ5.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiroJ5.TabIndex = 18
+        Me.PictTiroJ5.TabStop = False
+        Me.PictTiroJ5.Visible = False
         '
-        'JogoAPontosJvJ
+        'PicJogador6
+        '
+        Me.PicJogador6.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave6
+        Me.PicJogador6.Location = New System.Drawing.Point(634, 361)
+        Me.PicJogador6.Name = "PicJogador6"
+        Me.PicJogador6.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador6.TabIndex = 17
+        Me.PicJogador6.TabStop = False
+        Me.PicJogador6.Visible = False
+        '
+        'PicJogador5
+        '
+        Me.PicJogador5.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave5
+        Me.PicJogador5.Location = New System.Drawing.Point(506, 361)
+        Me.PicJogador5.Name = "PicJogador5"
+        Me.PicJogador5.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador5.TabIndex = 16
+        Me.PicJogador5.TabStop = False
+        Me.PicJogador5.Visible = False
+        '
+        'PictTiroJ4
+        '
+        Me.PictTiroJ4.BackColor = System.Drawing.Color.Blue
+        Me.PictTiroJ4.Location = New System.Drawing.Point(415, 335)
+        Me.PictTiroJ4.Name = "PictTiroJ4"
+        Me.PictTiroJ4.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiroJ4.TabIndex = 13
+        Me.PictTiroJ4.TabStop = False
+        Me.PictTiroJ4.Visible = False
+        '
+        'PicJogador4
+        '
+        Me.PicJogador4.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave4
+        Me.PicJogador4.Location = New System.Drawing.Point(395, 361)
+        Me.PicJogador4.Name = "PicJogador4"
+        Me.PicJogador4.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador4.TabIndex = 12
+        Me.PicJogador4.TabStop = False
+        Me.PicJogador4.Visible = False
+        '
+        'PictTiroJ3
+        '
+        Me.PictTiroJ3.BackColor = System.Drawing.Color.Yellow
+        Me.PictTiroJ3.Location = New System.Drawing.Point(298, 335)
+        Me.PictTiroJ3.Name = "PictTiroJ3"
+        Me.PictTiroJ3.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiroJ3.TabIndex = 11
+        Me.PictTiroJ3.TabStop = False
+        Me.PictTiroJ3.Visible = False
+        '
+        'PicJogador3
+        '
+        Me.PicJogador3.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave3
+        Me.PicJogador3.Location = New System.Drawing.Point(274, 361)
+        Me.PicJogador3.Name = "PicJogador3"
+        Me.PicJogador3.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador3.TabIndex = 10
+        Me.PicJogador3.TabStop = False
+        Me.PicJogador3.Visible = False
+        '
+        'PictTiroJ2
+        '
+        Me.PictTiroJ2.BackColor = System.Drawing.Color.Red
+        Me.PictTiroJ2.Location = New System.Drawing.Point(169, 335)
+        Me.PictTiroJ2.Name = "PictTiroJ2"
+        Me.PictTiroJ2.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiroJ2.TabIndex = 6
+        Me.PictTiroJ2.TabStop = False
+        '
+        'PicJogador2
+        '
+        Me.PicJogador2.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave2
+        Me.PicJogador2.Location = New System.Drawing.Point(150, 361)
+        Me.PicJogador2.Name = "PicJogador2"
+        Me.PicJogador2.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador2.TabIndex = 5
+        Me.PicJogador2.TabStop = False
+        '
+        'PictTiroJ1
+        '
+        Me.PictTiroJ1.BackColor = System.Drawing.Color.Green
+        Me.PictTiroJ1.Location = New System.Drawing.Point(43, 335)
+        Me.PictTiroJ1.Name = "PictTiroJ1"
+        Me.PictTiroJ1.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiroJ1.TabIndex = 1
+        Me.PictTiroJ1.TabStop = False
+        '
+        'PicJogador1
+        '
+        Me.PicJogador1.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave1
+        Me.PicJogador1.Location = New System.Drawing.Point(27, 361)
+        Me.PicJogador1.Name = "PicJogador1"
+        Me.PicJogador1.Size = New System.Drawing.Size(50, 50)
+        Me.PicJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicJogador1.TabIndex = 0
+        Me.PicJogador1.TabStop = False
+        '
+        'Jogo_PvE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -323,20 +323,20 @@ Partial Class Jogo_PvE
         Me.Controls.Add(Me.PictTiroJ1)
         Me.Controls.Add(Me.PicJogador1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "JogoAPontosJvJ"
+        Me.Name = "Jogo_PvE"
         Me.Text = "Invasores"
-        CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicJogador1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicJogador2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictTiroJ2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictTiroJ3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicJogador3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictTiroJ6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictTiroJ5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicJogador6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicJogador5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictTiroJ4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicJogador4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicJogador5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PicJogador6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictTiroJ5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictTiroJ6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictTiroJ3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicJogador3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictTiroJ2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicJogador2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicJogador1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -37,7 +37,7 @@
         MoverTiro()
         MatarInavasor()
         GameOver()
-        ' DegrauInvasorMorto()
+        PrimeiroInvasorRotina()
     End Sub
 
     Private Sub Invasores_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
@@ -111,7 +111,7 @@
         'Opções de tudo
         SomaDasVidasInvasores = 0 'Leva a soma a 0 para poder recontar de novo
 
-        OpcoesInvasores() 'Chama os invasores para poder fazer as pontuações
+        CriarInvasores() 'Chama os invasores para poder fazer as pontuações
 
         'Para todos os invasores faz isto
         For Me.X = 1 To NumDeInvasores
@@ -212,15 +212,20 @@
                 RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
                 PictTiro.Visible = False 'Torna o tiro invisivel
-
-                '----------------------
-                'If Invasores(X).Visible = False Then
-                'InvasoresCodigo(X) += 1
-                'PrimeiroInvasor = InvasoresCodigo(X)
-                ' End If
-                'Label4.Text = PrimeiroInvasor
-                '--------------------------
             End If
+        Next
+    End Sub
+
+    Private Sub PrimeiroInvasorRotina()
+        '----------------
+        For Me.X = 1 To NumDeInvasores
+            If Invasores(X).Visible = False Then
+                InvasoresCodigo(X) += 1
+                PrimeiroInvasor = InvasoresCodigo(X)
+            Else
+                PrimeiroInvasor = InvasoresCodigo(X)
+            End If
+            ' Label4.Text = PrimeiroInvasor
         Next
     End Sub
 
@@ -264,7 +269,7 @@
         End If
     End Sub
 
-    Private Sub OpcoesInvasores()
+    Private Sub CriarInvasores()
         'Comçar todos os invasores do lado da tela
 
         Randomize()

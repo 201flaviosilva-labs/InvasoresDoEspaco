@@ -24,13 +24,13 @@ Partial Class Jogo_Rapido
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TimerPrincipal = New System.Windows.Forms.Timer(Me.components)
-        Me.PictTiro = New System.Windows.Forms.PictureBox()
-        Me.NaveJogador = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TimerInvasor = New System.Windows.Forms.Timer(Me.components)
         Me.TimerJogadorRato = New System.Windows.Forms.Timer(Me.components)
+        Me.PictTiro = New System.Windows.Forms.PictureBox()
+        Me.NaveJogador = New System.Windows.Forms.PictureBox()
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NaveJogador, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -38,25 +38,6 @@ Partial Class Jogo_Rapido
         'TimerPrincipal
         '
         Me.TimerPrincipal.Interval = 1
-        '
-        'PictTiro
-        '
-        Me.PictTiro.BackColor = System.Drawing.Color.Red
-        Me.PictTiro.Location = New System.Drawing.Point(28, 335)
-        Me.PictTiro.Name = "PictTiro"
-        Me.PictTiro.Size = New System.Drawing.Size(10, 20)
-        Me.PictTiro.TabIndex = 1
-        Me.PictTiro.TabStop = False
-        '
-        'NaveJogador
-        '
-        Me.NaveJogador.Image = Global.Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip
-        Me.NaveJogador.Location = New System.Drawing.Point(12, 361)
-        Me.NaveJogador.Name = "NaveJogador"
-        Me.NaveJogador.Size = New System.Drawing.Size(50, 50)
-        Me.NaveJogador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.NaveJogador.TabIndex = 0
-        Me.NaveJogador.TabStop = False
         '
         'Label1
         '
@@ -105,6 +86,25 @@ Partial Class Jogo_Rapido
         Me.TimerJogadorRato.Enabled = True
         Me.TimerJogadorRato.Interval = 1
         '
+        'PictTiro
+        '
+        Me.PictTiro.BackColor = System.Drawing.Color.Red
+        Me.PictTiro.Location = New System.Drawing.Point(28, 335)
+        Me.PictTiro.Name = "PictTiro"
+        Me.PictTiro.Size = New System.Drawing.Size(10, 20)
+        Me.PictTiro.TabIndex = 1
+        Me.PictTiro.TabStop = False
+        '
+        'NaveJogador
+        '
+        Me.NaveJogador.Image = Global.Invasores_do_Espaço.My.Resources.Resources.Nave2
+        Me.NaveJogador.Location = New System.Drawing.Point(12, 361)
+        Me.NaveJogador.Name = "NaveJogador"
+        Me.NaveJogador.Size = New System.Drawing.Size(50, 50)
+        Me.NaveJogador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.NaveJogador.TabIndex = 0
+        Me.NaveJogador.TabStop = False
+        '
         'Jogo_Rapido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -119,6 +119,7 @@ Partial Class Jogo_Rapido
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Jogo_Rapido"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Invasores"
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NaveJogador, System.ComponentModel.ISupportInitialize).EndInit()

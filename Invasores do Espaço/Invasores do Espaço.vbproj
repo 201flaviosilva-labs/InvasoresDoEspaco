@@ -87,6 +87,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Campanha.Designer.vb">
+      <DependentUpon>Campanha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Campanha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeathmatchEscolhaNave.Designer.vb">
+      <DependentUpon>DeathmatchEscolhaNave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeathmatchEscolhaNave.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Jogo_Deathmatch.Designer.vb">
       <DependentUpon>Jogo_Deathmatch.vb</DependentUpon>
     </Compile>
@@ -154,6 +166,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Campanha.resx">
+      <DependentUpon>Campanha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeathmatchEscolhaNave.resx">
+      <DependentUpon>DeathmatchEscolhaNave.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Jogo_Deathmatch.resx">
       <DependentUpon>Jogo_Deathmatch.vb</DependentUpon>
     </EmbeddedResource>
@@ -197,12 +215,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Invasor1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Invasor2.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\SpaceInvadersShip.bmp" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +238,33 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invasor3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invasor2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invasor1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nave2.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

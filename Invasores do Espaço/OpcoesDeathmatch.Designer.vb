@@ -25,10 +25,12 @@ Partial Class OpcoesDeathmatch
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -40,17 +42,18 @@ Partial Class OpcoesDeathmatch
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.Location = New System.Drawing.Point(267, 135)
+        Me.CheckBox1.Location = New System.Drawing.Point(232, 174)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(109, 26)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Especais"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.Visible = False
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(12, 160)
+        Me.Button1.Location = New System.Drawing.Point(12, 206)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(109, 33)
         Me.Button1.TabIndex = 2
@@ -59,16 +62,30 @@ Partial Class OpcoesDeathmatch
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.RadioButton4)
         Me.GroupBox1.Controls.Add(Me.RadioButton3)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(214, 126)
+        Me.GroupBox1.Size = New System.Drawing.Size(214, 172)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Modo de Jogo"
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Enabled = False
+        Me.RadioButton4.Location = New System.Drawing.Point(6, 125)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(98, 26)
+        Me.RadioButton4.TabIndex = 3
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "Vs Bots"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.RadioButton4.Visible = False
         '
         'RadioButton3
         '
@@ -105,15 +122,29 @@ Partial Class OpcoesDeathmatch
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.RadioButton5)
         Me.GroupBox2.Controls.Add(Me.RadioButton7)
         Me.GroupBox2.Controls.Add(Me.RadioButton8)
         Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(232, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(214, 105)
+        Me.GroupBox2.Size = New System.Drawing.Size(214, 140)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Número Jogadores"
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Enabled = False
+        Me.RadioButton5.Location = New System.Drawing.Point(6, 93)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(138, 26)
+        Me.RadioButton5.TabIndex = 2
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "6 Jogadores"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        Me.RadioButton5.Visible = False
         '
         'RadioButton7
         '
@@ -140,7 +171,7 @@ Partial Class OpcoesDeathmatch
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(337, 160)
+        Me.Button2.Location = New System.Drawing.Point(337, 206)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(109, 33)
         Me.Button2.TabIndex = 6
@@ -151,13 +182,16 @@ Partial Class OpcoesDeathmatch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 207)
+        Me.ClientSize = New System.Drawing.Size(470, 254)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "OpcoesDeathmatch"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Team Deathmatch"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -177,4 +211,6 @@ Partial Class OpcoesDeathmatch
     Friend WithEvents RadioButton7 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton8 As System.Windows.Forms.RadioButton
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
 End Class

@@ -76,6 +76,7 @@ Partial Class Multijogador
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Online"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Button3
         '
@@ -168,7 +169,10 @@ Partial Class Multijogador
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Multijogador"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Multijogador"
         Me.ResumeLayout(False)
 

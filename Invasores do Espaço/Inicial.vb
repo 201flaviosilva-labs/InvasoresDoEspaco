@@ -2,14 +2,8 @@
     Dim JogoPontos As Boolean
     Dim DicaRandom As Byte = 1
     Dim DicaTexto As String = ""
+    Dim tempo As Byte = 3
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim JogadrComORato = MsgBox("Queres jogar como Rato?", MsgBoxStyle.YesNo) ' Pergunta se quer jogador com o rato ou não
-        If JogadrComORato = MsgBoxResult.Yes Then ' se a escolha tiver sido ism então
-
-            JogoRapridoRato = True 'JOgar com o rato fica disponivel
-        Else
-            JogoRapridoRato = False 'JOgar com o rato fica indisponivel
-        End If
         Jogo_Rapido.Show()
     End Sub
 
@@ -72,5 +66,34 @@
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
         SubDicas()
+    End Sub
+
+    Private Sub Label4_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.MouseEnter
+        tempo = 3
+        Label4.Text = tempo
+        Label4.BackColor = Color.Green
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        tempo -= 1
+        Label4.Text = tempo
+        If tempo = 3 Then
+            Label4.BackColor = Color.Green
+        End If
+        If tempo = 2 Then
+            Label4.BackColor = Color.Yellow
+        End If
+        If tempo = 1 Then
+            Label4.BackColor = Color.Red
+        End If
+        If tempo = 0 Then
+            Timer1.Enabled = False
+            Label4.Text = "Planeta Games"
+        End If
+    End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Campanha.Show()
     End Sub
 End Class

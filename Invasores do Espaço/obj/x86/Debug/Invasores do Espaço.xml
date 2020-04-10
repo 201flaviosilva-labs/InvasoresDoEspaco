@@ -32,6 +32,36 @@ Invasores do Espaço
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Nave6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Invasores_do_Espaço.My.Resources.Resources.SpaceInvadersShip">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
