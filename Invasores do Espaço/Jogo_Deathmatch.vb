@@ -31,7 +31,7 @@
     Private Sub Jogo_Deathmatch_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         'Tecla é precionada para baixo
 
-        'Jogador 1
+        'Jogador 1 -----------------------------------
         'Ao clicar nas teclas (A ou D) permitir mover
         'D - Direita
         If e.KeyValue = Keys.D Then
@@ -53,7 +53,7 @@
             PictTiroJ1.Left = PicJogador1.Left + (PicJogador1.Width / 2) - (PictTiroJ1.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
         End If
 
-        'Jogador 2
+        'Jogador 2 -------------------------------------------------------------------------------------
         'Ao clicar nas teclas (K ou L) permitir mover
         'L - Direita
         If e.KeyValue = Keys.L Then
@@ -75,48 +75,49 @@
             PictTiroJ2.Left = PicJogador2.Left + (PicJogador2.Width / 2) - (PictTiroJ2.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
         End If
 
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores
-            'Jogador 3
-            'Ao clicar nas teclas (F ou H) permitir mover
-            'H - Direita
-            If e.KeyValue = Keys.H Then
+        'Jogador 3-------------------------------------------------------------
+        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+            'Ao clicar nas teclas (<- ou ->) permitir mover
+            '-> - Direita
+            If e.KeyValue = Keys.Right Then
                 Jogador3Direita = True 'Permite a ida para Direita
                 Jogador3Esquerda = False 'Bloqueia a ida para a Esquerda
             End If
 
-            'F - Esquerda
-            If e.KeyValue = Keys.F Then
+            '<- - Esquerda
+            If e.KeyValue = Keys.Left Then
                 Jogador3Esquerda = True 'Permite a ida para Esquerda
                 Jogador3Direita = False 'Bloqueia a ida para a Direita
             End If
 
-            'T - Tiro
+            'up - Tiro
             'Se o espaço for permido e o tiro visiver então
-            If ((e.KeyValue = Keys.T) And (PictTiroJ3.Visible = False)) Then
+            If ((e.KeyValue = Keys.Up) And (PictTiroJ3.Visible = False)) Then
                 PictTiroJ3.Visible = True 'Torna o tiro visivel
                 PictTiroJ3.Top = PicJogador3.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
                 PictTiroJ3.Left = PicJogador3.Left + (PicJogador3.Width / 2) - (PictTiroJ3.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
             End If
         End If
 
-        If JogoPontosNJogadores = 4 Then 'Se estiver ativo um jogo para 4 jogadores
-            'Jogador 4
-            'Ao clicar nas teclas (<- ou ->) permitir mover
-            '-> - Direita
-            If e.KeyValue = Keys.Right Then
+
+        'Jogador 4--------------------------------------------------
+        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+            'Ao clicar nas teclas (F ou H) permitir mover
+            'H - Direita
+            If e.KeyValue = Keys.H Then
                 Jogador4Direita = True 'Permite a ida para Direita
                 Jogador4Esquerda = False 'Bloqueia a ida para a Esquerda
             End If
 
-            '<- - Esquerda
-            If e.KeyValue = Keys.Left Then
+            'F - Esquerda
+            If e.KeyValue = Keys.F Then
                 Jogador4Esquerda = True 'Permite a ida para Esquerda
                 Jogador4Direita = False 'Bloqueia a ida para a Direita
             End If
 
-            'up - Tiro
+            'T - Tiro
             'Se o espaço for permido e o tiro visiver então
-            If ((e.KeyValue = Keys.Up) And (PictTiroJ4.Visible = False)) Then
+            If ((e.KeyValue = Keys.T) And (PictTiroJ4.Visible = False)) Then
                 PictTiroJ4.Visible = True 'Torna o tiro visivel
                 PictTiroJ4.Top = PicJogador4.Top + PicJogador4.Width 'A picterbox do tiro vai ter com o topo da nave do jogardor
                 PictTiroJ4.Left = PicJogador4.Left + (PicJogador4.Width / 2) - (PictTiroJ4.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
@@ -172,11 +173,9 @@
 
         If JogoPontosNJogadores >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
             PicJogador3.Visible = True 'Torna a pic do jogador visivel
-            Label5.Visible = True 'Torna a label dos pontos visivel
         End If
         If JogoPontosNJogadores = 4 Then
             PicJogador4.Visible = True
-            Label6.Visible = True
         End If
     End Sub
 
@@ -339,13 +338,13 @@
     Sub RotinaPontuacaoEquipa1()
         'Pontuação
         PontosEquipa1 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
-        Label1.Text = PontosEquipa1 'Escreve os pontos
+        Label1.Text = "Pontos Equipa 1: " & PontosEquipa1 'Escreve os pontos
     End Sub
 
     Sub RotinaPontuacaoEquipa2()
         'Pontuação
         PontosEquipa2 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
-        Label3.Text = PontosEquipa2 'Escreve os pontos
+        Label3.Text = "Pontos Equipa 2: " & PontosEquipa2 'Escreve os pontos
     End Sub
 
     Sub TemporalizadorDeJogo()
@@ -367,13 +366,13 @@
         'Pausa
         If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
             If Pausa = True Then 'Se pausa não estiver ativo
-                TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
-                Label6.Visible = False 'Label que diz "Pausa fica visivel"
-                Pausa = False 'Pausa fica ativo
+                TimerPrincipal.Enabled = True ' Otimer volta a funcionar
+                Label6.Visible = False 'Label que diz "Pausa" fica invisivel"
+                Pausa = False 'Pausa fica desativo
             Else
-                TimerPrincipal.Enabled = False 'O timer volta a funcionar
-                Label6.Visible = True 'A laber que diz "Pausa vai desaparecer"
-                Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
+                TimerPrincipal.Enabled = False 'Parar o timer que manda para tudo, daí ser uma pausa
+                Label6.Visible = True 'A laber que diz "Pausa" vai aparecer"
+                Pausa = True 'Pausa fica ativo
             End If
         End If
 

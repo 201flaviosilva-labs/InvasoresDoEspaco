@@ -293,15 +293,17 @@
         'Pausa
         If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
             If Pausa = True Then 'Se pausa não estiver ativo
-                TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
-                TimerInvasor.Enabled = True ' Para os invasores de nadar
-                Label1.Visible = False 'Label que diz "Pausa fica visivel"
-                Pausa = False 'Pausa fica ativo
+                TimerPrincipal.Enabled = True ' Otimer volta a funcionar
+                TimerInvasor.Enabled = True ' Otimer volta a funcionar
+                TimerJogadorRato.Enabled = True ' Otimer volta a funcionar
+                Label1.Visible = False 'Label que diz "Pausa fica invisivel"
+                Pausa = False 'Pausa fica desativo
             Else
-                TimerPrincipal.Enabled = False 'O timer volta a funcionar
-                TimerInvasor.Enabled = False 'O timer volta a funcionar
-                Label1.Visible = True 'A laber que diz "Pausa vai desaparecer"
-                Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
+                TimerPrincipal.Enabled = False 'Parar o timer que manda para tudo, daí ser uma pausa
+                TimerInvasor.Enabled = False ' Para os invasores de nadar
+                TimerJogadorRato.Enabled = False ' parar o timer do jogador do rato
+                Label1.Visible = True 'A laber que diz "Pausa" vai aparecer"
+                Pausa = True 'Pausa fica ativo
             End If
         End If
 
@@ -347,10 +349,10 @@
         Dim PicY As Integer = NaveJogador.Location.Y ' Deteta a localização do jogador no eixo do Y
 
         If PicX > RatoX Then 'Se a localização do jogador for menor que a do rato então
-            PicX -= 2 'Anda 2 para a esquerda
+            PicX -= VelocidadeJogador 'Anda 2 para a esquerda
             NaveJogador.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
         Else
-            PicX += 2 'Anda 2 para a direita
+            PicX += VelocidadeJogador 'Anda 2 para a direita
             NaveJogador.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
         End If
     End Sub

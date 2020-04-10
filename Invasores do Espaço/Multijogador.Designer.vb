@@ -31,6 +31,8 @@ Partial Class Multijogador
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button8
@@ -88,7 +90,7 @@ Partial Class Multijogador
         'Button9
         '
         Me.Button9.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(260, 69)
+        Me.Button9.Location = New System.Drawing.Point(260, 98)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(118, 37)
         Me.Button9.TabIndex = 24
@@ -99,7 +101,7 @@ Partial Class Multijogador
         'Button10
         '
         Me.Button10.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(260, 112)
+        Me.Button10.Location = New System.Drawing.Point(260, 141)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(118, 37)
         Me.Button10.TabIndex = 23
@@ -110,7 +112,7 @@ Partial Class Multijogador
         'Button11
         '
         Me.Button11.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(260, 155)
+        Me.Button11.Location = New System.Drawing.Point(260, 184)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(118, 37)
         Me.Button11.TabIndex = 22
@@ -121,18 +123,42 @@ Partial Class Multijogador
         'Button12
         '
         Me.Button12.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Button12.Location = New System.Drawing.Point(12, 211)
+        Me.Button12.Location = New System.Drawing.Point(16, 250)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(362, 37)
         Me.Button12.TabIndex = 25
         Me.Button12.Text = "Ajuda?"
         Me.Button12.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(260, 55)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(118, 37)
+        Me.Button4.TabIndex = 26
+        Me.Button4.Text = "Quintas"
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(260, 12)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(118, 37)
+        Me.Button5.TabIndex = 27
+        Me.Button5.Text = "Sextas"
+        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.Visible = False
+        '
         'Multijogador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(386, 299)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button10)
@@ -156,4 +182,6 @@ Partial Class Multijogador
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 End Class

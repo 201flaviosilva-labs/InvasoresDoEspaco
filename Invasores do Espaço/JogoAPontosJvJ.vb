@@ -4,10 +4,13 @@
     Dim Jogador1Esquerda As Boolean 'Define o movimento do jogador 1 ir para a Esquerda
     Dim Jogador2Direita As Boolean 'Define o movimento do jogador 2 ir para a Direira
     Dim Jogador2Esquerda As Boolean 'Define o movimento do jogador 2 ir para a Esquerda
-    Dim Jogador3Direita As Boolean 'Define o movimento do jogador 1 ir para a Direira
-    Dim Jogador3Esquerda As Boolean 'Define o movimento do jogador 1 ir para a Esquerda
-    Dim Jogador4Direita As Boolean 'Define o movimento do jogador 2 ir para a Direira
-    Dim Jogador4Esquerda As Boolean 'Define o movimento do jogador 2 ir para a Esquerda
+    Dim Jogador3Direita As Boolean 'Define o movimento do jogador 3 ir para a Direira
+    Dim Jogador3Esquerda As Boolean 'Define o movimento do jogador 3 ir para a Esquerda
+    Dim Jogador4Direita As Boolean 'Define o movimento do jogador 4 ir para a Direira
+    Dim Jogador4Esquerda As Boolean 'Define o movimento do jogador 4 ir para a Esquerda
+    Dim Jogador5Direita As Boolean 'Define o movimento do jogador 5 ir para a Direira
+    Dim Jogador5Esquerda As Boolean 'Define o movimento do jogador 5 ir para a Esquerda
+    Dim RatoX As Integer 'Deteta a localização no eixo do X do Rato
     Dim VelocidadeJogador As Integer = 3 'Define a velocidade do jogador
     Dim VelocidadeTiro As Integer = 20 'Define a velocidade do tiro do jogador
     Dim VelocidadeInvasor As Integer = 7 'Define a velocidade de deslocação dos invasores
@@ -30,25 +33,29 @@
     Dim PontosJogador2 As Integer = 0 'Define os pontos do jogador 2
     Dim PontosJogador3 As Integer = 0 'Define os pontos do jogador 3
     Dim PontosJogador4 As Integer = 0 'Define os pontos do jogador 4
+    Dim PontosJogador5 As Integer = 0 'Define os pontos do jogador 5
+    Dim PontosJogador6 As Integer = 0 'Define os pontos do jogador 6
     Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
         'Timer 1 temporalizador
-        TemporalizadorDeJogo()
         MoverJogador()
+        TemporalizadorDeJogo()
         MoverTiro()
         MatarInvasorJ1()
         MatarInvasorJ2()
         MatarInvasorJ3()
         MatarInvasorJ4()
+        MatarInvasorJ5()
+        MatarInvasorJ6()
         GameOver()
     End Sub
 
     Private Sub Invasores_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         'Tecla é precionada para baixo
 
-        'Jogador 1
+        'Jogador 1 ----------------------------------------------------
         'Ao clicar nas teclas (A ou D) permitir mover
         'D - Direita
         If e.KeyValue = Keys.D Then
@@ -70,7 +77,7 @@
             PictTiroJ1.Left = PicJogador1.Left + (PicJogador1.Width / 2) - (PictTiroJ1.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
         End If
 
-        'Jogador 2
+        'Jogador 2 ---------------------------------------------------------
         'Ao clicar nas teclas (K ou L) permitir mover
         'L - Direita
         If e.KeyValue = Keys.L Then
@@ -92,51 +99,76 @@
             PictTiroJ2.Left = PicJogador2.Left + (PicJogador2.Width / 2) - (PictTiroJ2.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
         End If
 
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores
-            'Jogador 3
-            'Ao clicar nas teclas (F ou H) permitir mover
-            'H - Direita
-            If e.KeyValue = Keys.H Then
+        'Jogador 3-------------------------------------------------------------
+        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+            'Ao clicar nas teclas (<- ou ->) permitir mover
+            '-> - Direita
+            If e.KeyValue = Keys.Right Then
                 Jogador3Direita = True 'Permite a ida para Direita
                 Jogador3Esquerda = False 'Bloqueia a ida para a Esquerda
             End If
 
-            'F - Esquerda
-            If e.KeyValue = Keys.F Then
+            '<- - Esquerda
+            If e.KeyValue = Keys.Left Then
                 Jogador3Esquerda = True 'Permite a ida para Esquerda
                 Jogador3Direita = False 'Bloqueia a ida para a Direita
             End If
 
-            'T - Tiro
+            'up - Tiro
             'Se o espaço for permido e o tiro visiver então
-            If ((e.KeyValue = Keys.T) And (PictTiroJ3.Visible = False)) Then
+            If ((e.KeyValue = Keys.Up) And (PictTiroJ3.Visible = False)) Then
                 PictTiroJ3.Visible = True 'Torna o tiro visivel
                 PictTiroJ3.Top = PicJogador3.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
                 PictTiroJ3.Left = PicJogador3.Left + (PicJogador3.Width / 2) - (PictTiroJ3.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
             End If
         End If
 
-        If JogoPontosNJogadores = 4 Then 'Se estiver ativo um jogo para 4 jogadores
-            'Jogador 4
-            'Ao clicar nas teclas (<- ou ->) permitir mover
-            '-> - Direita
-            If e.KeyValue = Keys.Right Then
+
+        'Jogador 4--------------------------------------------------
+        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+            'Ao clicar nas teclas (F ou H) permitir mover
+            'H - Direita
+            If e.KeyValue = Keys.H Then
                 Jogador4Direita = True 'Permite a ida para Direita
                 Jogador4Esquerda = False 'Bloqueia a ida para a Esquerda
             End If
 
-            '<- - Esquerda
-            If e.KeyValue = Keys.Left Then
+            'F - Esquerda
+            If e.KeyValue = Keys.F Then
                 Jogador4Esquerda = True 'Permite a ida para Esquerda
                 Jogador4Direita = False 'Bloqueia a ida para a Direita
             End If
 
-            'up - Tiro
+            'T - Tiro
             'Se o espaço for permido e o tiro visiver então
-            If ((e.KeyValue = Keys.Up) And (PictTiroJ4.Visible = False)) Then
+            If ((e.KeyValue = Keys.T) And (PictTiroJ4.Visible = False)) Then
                 PictTiroJ4.Visible = True 'Torna o tiro visivel
                 PictTiroJ4.Top = PicJogador4.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
                 PictTiroJ4.Left = PicJogador4.Left + (PicJogador4.Width / 2) - (PictTiroJ4.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
+            End If
+        End If
+
+        'Jogador 5------------------------------------------
+        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mias
+            'Ao clicar nas teclas (4 ou 6) permitir mover
+            '6 - Direita
+            If e.KeyValue = Keys.NumPad6 Then
+                Jogador5Direita = True 'Permite a ida para Direita
+                Jogador5Esquerda = False 'Bloqueia a ida para a Esquerda
+            End If
+
+            '4 - Esquerda
+            If e.KeyValue = Keys.NumPad4 Then
+                Jogador5Esquerda = True 'Permite a ida para Esquerda
+                Jogador5Direita = False 'Bloqueia a ida para a Direita
+            End If
+
+            '8 - Tiro
+            'Se o espaço for permido e o tiro visiver então
+            If ((e.KeyValue = Keys.NumPad8) And (PictTiroJ5.Visible = False)) Then
+                PictTiroJ5.Visible = True 'Torna o tiro visivel
+                PictTiroJ5.Top = PicJogador5.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
+                PictTiroJ5.Left = PicJogador5.Left + (PicJogador5.Width / 2) - (PictTiroJ5.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
             End If
         End If
     End Sub
@@ -162,7 +194,7 @@
 
 
 
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores
+        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
             'Jogador 3
             If (Jogador3Direita = True) And (PicJogador3.Left + PicJogador3.Width < Me.ClientRectangle.Width) Then
                 PicJogador3.Left += VelocidadeJogador
@@ -172,13 +204,23 @@
             End If
         End If
 
-        If JogoPontosNJogadores = 4 Then 'Se estiver ativo um jogo para 4 jogadores
+        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
             'Jogador 4
             If (Jogador4Direita = True) And (PicJogador4.Left + PicJogador4.Width < Me.ClientRectangle.Width) Then
                 PicJogador4.Left += VelocidadeJogador
             End If
             If (Jogador4Esquerda = True) And (PicJogador4.Left > Me.ClientRectangle.Left) Then
                 PicJogador4.Left -= VelocidadeJogador
+            End If
+        End If
+
+        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
+            'Jogador 5
+            If (Jogador5Direita = True) And (PicJogador5.Left + PicJogador5.Width < Me.ClientRectangle.Width) Then
+                PicJogador5.Left += VelocidadeJogador
+            End If
+            If (Jogador5Esquerda = True) And (PicJogador5.Left > Me.ClientRectangle.Left) Then
+                PicJogador5.Left -= VelocidadeJogador
             End If
         End If
     End Sub
@@ -216,39 +258,55 @@
             Jogador2Direita = False
         End If
 
-
-
-        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores
-            'Jogador 3
-            'H - Direita
-            If e.KeyValue = Keys.H Then
+        If JogoPontosNJogadores >= 3 Then 'Se estiver ativo um jogo para 3 jogadores ou mais
+            'Jogador 3-----------------------
+            '-> - Direita
+            If e.KeyValue = Keys.Right Then
                 'Bloqueia o movimento para a esquerda e para a direita
                 Jogador3Direita = False
                 Jogador3Esquerda = False
             End If
 
-            'F - Esquerda
-            If e.KeyValue = Keys.F Then
+            '<- - Esquerda
+            If e.KeyValue = Keys.Left Then
                 'Bloqueia o movimento para a esquerda e para a direita
                 Jogador3Esquerda = False
                 Jogador3Direita = False
             End If
         End If
 
-        If JogoPontosNJogadores = 4 Then 'Se estiver ativo um jogo para 4 jogadores
-            'Jogador 4
-            '-> - Direita
-            If e.KeyValue = Keys.Right Then
+        If JogoPontosNJogadores >= 4 Then 'Se estiver ativo um jogo para 4 jogadores ou mais
+            'Jogador 4-------------------
+            'H - Direita
+            If e.KeyValue = Keys.H Then
                 'Bloqueia o movimento para a esquerda e para a direita
                 Jogador4Direita = False
                 Jogador4Esquerda = False
             End If
 
-            '<- - Esquerda
-            If e.KeyValue = Keys.Left Then
+            'F - Esquerda
+            If e.KeyValue = Keys.F Then
                 'Bloqueia o movimento para a esquerda e para a direita
                 Jogador4Esquerda = False
                 Jogador4Direita = False
+            End If
+        End If
+
+
+        If JogoPontosNJogadores >= 5 Then 'Se estiver ativo um jogo para 5 jogadores ou mais
+            'Jogador 5
+            '6 - Direita
+            If e.KeyValue = Keys.NumPad6 Then
+                'Bloqueia o movimento para a esquerda e para a direita
+                Jogador5Direita = False
+                Jogador5Esquerda = False
+            End If
+
+            '4 - Esquerda
+            If e.KeyValue = Keys.NumPad4 Then
+                'Bloqueia o movimento para a esquerda e para a direita
+                Jogador5Esquerda = False
+                Jogador5Direita = False
             End If
         End If
     End Sub
@@ -261,9 +319,20 @@
             PicJogador3.Visible = True 'Torna a pic do jogador visivel
             Label5.Visible = True 'Torna a label dos pontos visivel
         End If
-        If JogoPontosNJogadores = 4 Then
+        If JogoPontosNJogadores >= 4 Then
             PicJogador4.Visible = True
             Label6.Visible = True
+        End If
+
+        If JogoPontosNJogadores >= 5 Then
+            PicJogador5.Visible = True
+            Label7.Visible = True
+        End If
+
+        If JogoPontosNJogadores >= 6 Then
+            PicJogador6.Visible = True
+            Label8.Visible = True
+            TimerMoverJogadorRato.Enabled = True
         End If
     End Sub
 
@@ -285,6 +354,8 @@
         PictTiroJ2.Visible = False 'Tiro invisivel
         PictTiroJ3.Visible = False 'Tiro invisivel
         PictTiroJ4.Visible = False 'Tiro invisivel
+        PictTiroJ5.Visible = False 'Tiro invisivel
+        PictTiroJ6.Visible = False 'Tiro invisivel
 
 
         'Começar de novo
@@ -292,6 +363,8 @@
         PontosJogador2 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
         PontosJogador3 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
         PontosJogador4 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        PontosJogador5 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        PontosJogador6 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
         TempoPartida = 0
         PontoPorMorte = 0
         ContadorNumeroInvasoresMortos = 0
@@ -313,10 +386,19 @@
             Jogador3Direita = False
             Jogador3Esquerda = False
         End If
-        If JogoPontosNJogadores = 4 Then
+        If JogoPontosNJogadores >= 4 Then
             RotinaPontuacaoJ4()
             Jogador4Direita = False
             Jogador4Esquerda = False
+        End If
+        If JogoPontosNJogadores >= 5 Then
+            RotinaPontuacaoJ5()
+            Jogador5Direita = False
+            Jogador5Esquerda = False
+        End If
+        If JogoPontosNJogadores >= 6 Then
+            TimerMoverJogadorRato.Enabled = True
+            RotinaPontuacaoJ6()
         End If
         TemporalizadorDeJogo()
     End Sub
@@ -353,7 +435,8 @@
                 PictTiroJ3.Visible = False 'o tiro fica invisivel
             End If
         End If
-        If JogoPontosNJogadores = 4 Then
+
+        If JogoPontosNJogadores >= 4 Then
             If PictTiroJ4.Visible = True Then 'Se o tiro estiver visivel
                 PictTiroJ4.Top -= VelocidadeTiro 'O tiro começa a andar para cima
             End If
@@ -361,6 +444,28 @@
             'Se da parte de cima da pictorbox até ao "cu" da mesma e for maior que a barra do topo da tela então
             If PictTiroJ4.Top + PictTiroJ4.Height < Me.ClientRectangle.Top Then
                 PictTiroJ4.Visible = False 'o tiro fica invisivel
+            End If
+        End If
+
+        If JogoPontosNJogadores >= 5 Then
+            If PictTiroJ5.Visible = True Then 'Se o tiro estiver visivel
+                PictTiroJ5.Top -= VelocidadeTiro 'O tiro começa a andar para cima
+            End If
+
+            'Se da parte de cima da pictorbox até ao "cu" da mesma e for maior que a barra do topo da tela então
+            If PictTiroJ5.Top + PictTiroJ5.Height < Me.ClientRectangle.Top Then
+                PictTiroJ5.Visible = False 'o tiro fica invisivel
+            End If
+        End If
+
+        If JogoPontosNJogadores >= 6 Then
+            If PictTiroJ6.Visible = True Then 'Se o tiro estiver visivel
+                PictTiroJ6.Top -= VelocidadeTiro 'O tiro começa a andar para cima
+            End If
+
+            'Se da parte de cima da pictorbox até ao "cu" da mesma e for maior que a barra do topo da tela então
+            If PictTiroJ6.Top + PictTiroJ6.Height < Me.ClientRectangle.Top Then
+                PictTiroJ6.Visible = False 'o tiro fica invisivel
             End If
         End If
     End Sub
@@ -396,6 +501,7 @@
             If Invasores(X).Top + Invasores(X).Height >= PicJogador1.Top And Invasores(X).Visible = True Then
                 TimerPrincipal.Enabled = False 'Parar o timer
                 TimerInvasores.Enabled = False 'parar os invasores de andar
+                TimerMoverJogadorRato.Enabled = False 'parar o jogador 6 de andar
                 Me.X = NumDeInvasores 'Dizer para parar de fazer o ciclo
                 MsgBox("Game Over - A terra foi Invadida") 'Informar que a terra foi invadida e que perdeu
                 NovoJogo() 'Perguntar se quer começar de novo
@@ -406,6 +512,7 @@
         If ContadorNumeroInvasoresMortos = NumDeInvasores Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
             TimerPrincipal.Enabled = False 'Parar o timer
             TimerInvasores.Enabled = False 'Parar o timer
+            TimerMoverJogadorRato.Enabled = False 'parar o jogador 6 de andar
             If (PontosJogador1 > PontosJogador2) And (PontosJogador1 > PontosJogador3) And (PontosJogador1 > PontosJogador4) Then 'Se  jogador 1 tiver menos pontos que o jogador 2 e jogador 1 tiver menos pontos que o jogador 3 e jogador 1 tiver menos pontos que o jogador 4
                 MsgBox("Joador 1 venceu") 'jogador 2 venceu
             ElseIf (PontosJogador2 > PontosJogador1) And (PontosJogador2 > PontosJogador3) And (PontosJogador2 > PontosJogador4) Then
@@ -491,7 +598,7 @@
 
     Private Sub MatarInvasorJ4()
         'Rotina da morte do Invasor
-        If JogoPontosNJogadores = 4 Then
+        If JogoPontosNJogadores >= 4 Then
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ4.Top + PictTiroJ4.Height >= Invasores(X).Top) And (PictTiroJ4.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ4.Left + PictTiroJ4.Width >= Invasores(X).Left) And (PictTiroJ4.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ4.Visible = True) And (Invasores(X).Visible = True) Then
 
@@ -508,6 +615,54 @@
                     RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
                     PictTiroJ4.Visible = False 'Torna o tiro invisivel
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub MatarInvasorJ5()
+        'Rotina da morte do Invasor
+        If JogoPontosNJogadores >= 5 Then
+            For Me.X = 1 To NumDeInvasores
+                If (PictTiroJ5.Top + PictTiroJ5.Height >= Invasores(X).Top) And (PictTiroJ5.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ5.Left + PictTiroJ5.Width >= Invasores(X).Left) And (PictTiroJ5.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ5.Visible = True) And (Invasores(X).Visible = True) Then
+
+                    If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                        ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                        PontuacaoPorDegrauJ5() 'Para apenas ganhar pontos quando matar o invasor
+                        Invasores(X).Visible = False 'O invasor fica invisivel
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ5() 'Chama a rotina da pontuação para mostrar os pontos
+                    ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ5() 'Chama a rotina da pontuação para mostrar os pontos
+                    End If
+                    RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
+
+                    PictTiroJ5.Visible = False 'Torna o tiro invisivel
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub MatarInvasorJ6()
+        'Rotina da morte do Invasor
+        If JogoPontosNJogadores >= 6 Then
+            For Me.X = 1 To NumDeInvasores
+                If (PictTiroJ6.Top + PictTiroJ6.Height >= Invasores(X).Top) And (PictTiroJ6.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ6.Left + PictTiroJ6.Width >= Invasores(X).Left) And (PictTiroJ6.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ6.Visible = True) And (Invasores(X).Visible = True) Then
+
+                    If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                        ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                        PontuacaoPorDegrauJ6() 'Para apenas ganhar pontos quando matar o invasor
+                        Invasores(X).Visible = False 'O invasor fica invisivel
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ6() 'Chama a rotina da pontuação para mostrar os pontos
+                    ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ6() 'Chama a rotina da pontuação para mostrar os pontos
+                    End If
+                    RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
+
+                    PictTiroJ6.Visible = False 'Torna o tiro invisivel
                 End If
             Next
         End If
@@ -676,6 +831,88 @@
         End If
     End Sub
 
+    Sub PontuacaoPorDegrauJ5()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            PontosJogador5 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador5 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
+        End If
+    End Sub
+
+    Sub PontuacaoPorDegrauJ6()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            PontosJogador6 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador6 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
+        End If
+    End Sub
+
     Sub RotinaPontuacaoJ1()
         'Pontuação
         PontosJogador1 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
@@ -698,6 +935,18 @@
         'Pontuação
         PontosJogador4 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
         Label6.Text = PontosJogador4 'Escreve os pontos
+    End Sub
+
+    Sub RotinaPontuacaoJ5()
+        'Pontuação
+        PontosJogador5 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label7.Text = PontosJogador5 'Escreve os pontos
+    End Sub
+
+    Sub RotinaPontuacaoJ6()
+        'Pontuação
+        PontosJogador6 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label8.Text = PontosJogador6 'Escreve os pontos
     End Sub
 
     Private Sub OpcoesInvasores()
@@ -746,15 +995,17 @@
         'Pausa
         If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
             If Pausa = True Then 'Se pausa não estiver ativo
-                TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
-                TimerInvasores.Enabled = True ' Para os invasores de nadar
-                Label1.Visible = False 'Label que diz "Pausa fica visivel"
-                Pausa = False 'Pausa fica ativo
+                TimerPrincipal.Enabled = True ' Otimer volta a funcionar
+                TimerInvasores.Enabled = True ' Otimer volta a funcionar
+                TimerMoverJogadorRato.Enabled = True ' Otimer volta a funcionar
+                Label1.Visible = False 'Label que diz "Pausa fica invisivel"
+                Pausa = False 'Pausa fica desativo
             Else
-                TimerPrincipal.Enabled = False 'O timer volta a funcionar
-                TimerInvasores.Enabled = False 'O timer volta a funcionar
-                Label1.Visible = True 'A laber que diz "Pausa vai desaparecer"
-                Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
+                TimerPrincipal.Enabled = False 'Parar o timer que manda para tudo, daí ser uma pausa
+                TimerInvasores.Enabled = False ' Para os invasores de nadar
+                TimerMoverJogadorRato.Enabled = False ' parar o timer do jogador do rato
+                Label1.Visible = True 'A laber que diz "Pausa" vai aparecer"
+                Pausa = True 'Pausa fica ativo
             End If
         End If
 
@@ -767,6 +1018,37 @@
     Private Sub TimerInvasores_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerInvasores.Tick
         'timer que move os invasores
         MoverInvasor()
+    End Sub
+
+    Private Sub TimerJogadorRato_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerMoverJogadorRato.Tick
+        'Timer do Rato
+        If JogoPontosNJogadores >= 6 Then 'Se o número de jogadores foi igual ou ais que 6
+            Dim PicX As Integer = PicJogador6.Location.X ' Deteta a localização do jogador no eixo do X
+            Dim PicY As Integer = PicJogador6.Location.Y ' Deteta a localização do jogador no eixo do Y
+
+            If PicX > RatoX Then 'Se a localização do jogador for menor que a do rato então
+                PicX -= VelocidadeJogador 'Anda a velucidade pre definida para a esquerda
+                PicJogador6.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
+            Else
+                PicX += VelocidadeJogador 'Anda a velucidade pre definida para a direita
+                PicJogador6.Location = New Point(PicX, PicY) 'jogador vai em direção á localização do rato (Ponteiro)
+            End If
+        End If
+
+    End Sub
+
+    Private Sub JogoAPontosJvJ_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles MyBase.MouseMove
+        'Quando o rato mover
+        RatoX = e.X 'Encontra a localização do rato
+    End Sub
+
+    Private Sub JogoAPontosJvJ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Click
+        'Ao clicar na tela
+        If PictTiroJ6.Visible = False Then
+            PictTiroJ6.Visible = True 'Torna o tiro visivel
+            PictTiroJ6.Top = PicJogador6.Top 'A picterbox do tiro vai ter com o topo da nave do jogardor
+            PictTiroJ6.Left = PicJogador6.Left + (PicJogador6.Width / 2) - (PictTiroJ6.Width / 2) 'A picterbox do tiro começa a subir no eixo do Y de onde foi lançada
+        End If
     End Sub
 
 End Class

@@ -9,9 +9,11 @@
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
         'Pontos
         JogoPontos = True
-        Button9.Visible = True
-        Button10.Visible = True
-        Button11.Visible = True
+        Button5.Visible = True 'Sextas
+        Button4.Visible = True 'Quintas
+        Button9.Visible = True ' Quadras
+        Button10.Visible = True 'Triplas
+        Button11.Visible = True 'Duplas
     End Sub
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
@@ -52,8 +54,30 @@
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         'Pontos
         JogoPontos = False
-        Button9.Visible = True
-        Button10.Visible = False
-        Button11.Visible = True
+        Button5.Visible = False 'Sextas
+        Button4.Visible = False 'Quintas
+        Button9.Visible = True 'Quadras
+        Button10.Visible = False 'Triplas
+        Button11.Visible = True 'Duplas
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        'Quintas
+        JogoPontosNJogadores = 5
+        If JogoPontos = True Then
+            JogoAPontosJvJ.Show()
+        Else
+            Jogo_Deathmatch.Show()
+        End If
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        'Sextas
+        JogoPontosNJogadores = 6
+        If JogoPontos = True Then
+            JogoAPontosJvJ.Show()
+        Else
+            Jogo_Deathmatch.Show()
+        End If
     End Sub
 End Class
