@@ -265,10 +265,10 @@
             RandomVidaInvasor(X) = Int(2 * Rnd() + 1) 'Cria um número random
             If RandomVidaInvasor(X) = 1 Then ' se A vida definida do invasor for de 1 então
                 SomaDasVidasInvasores += 1 'Aumenta o número de Vida no total de todos os invasores
-                Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
+                Invasores(X).Image = My.Resources.Invasor1 'Vai buscar aos recursos a imagem do invasor
             ElseIf RandomVidaInvasor(X) = 2 Then ' Caso A vida definida do invasor for de 1 então
                 SomaDasVidasInvasores += 2 'Aumenta o número de Vida no total de todos os invasores
-                Invasores(X).Image = My.Resources.SpaceInvadersShip 'Vai buscar aos recursos a imagem do invasor
+                Invasores(X).Image = My.Resources.Invasor2 'Vai buscar aos recursos a imagem do invasor
             End If
 
             Invasores(X).Width = 50 'Diz quanto mede a PictureBox

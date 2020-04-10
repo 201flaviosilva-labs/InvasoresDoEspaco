@@ -1,5 +1,7 @@
 ﻿Public Class Inicial
     Dim JogoPontos As Boolean
+    Dim DicaRandom As Byte = 1
+    Dim DicaTexto As String = ""
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Jogo_Rapido.Show()
     End Sub
@@ -14,6 +16,7 @@
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         'Multijogaodr
+        Multijogador.Show()
         Button7.Visible = True
         Button8.Visible = True
     End Sub
@@ -21,8 +24,8 @@
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
         'Duplas
         If JogoPontos = True Then
-            JogoAPontosJvJ.Show()
             JogoPontosNJogadores = 2
+            JogoAPontosJvJ.Show()
         End If
     End Sub
 
@@ -56,5 +59,29 @@
             JogoPontosNJogadores = 4
             JogoAPontosJvJ.Show()
         End If
+    End Sub
+
+    Sub SubDicas()
+        Randomize()
+        DicaRandom = Int(30 * Rnd() + 1) 'Cria um número aleatório inteiro
+        Select Case DicaRandom
+            Case 1
+                DicaTexto = "!"
+            Case 2
+                DicaTexto = "!!"
+            Case 3
+                DicaTexto = "!!!"
+            Case Else
+                DicaTexto = "Clica em 'ajuda' sempre que estiveres com alguma dúvida"
+        End Select
+        Label3.Text = DicaTexto
+    End Sub
+
+    Private Sub Inicial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        SubDicas()
+    End Sub
+
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+        SubDicas()
     End Sub
 End Class

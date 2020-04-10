@@ -110,7 +110,8 @@ Partial Class Jogo_Rapido
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictTiro)
         Me.Controls.Add(Me.NaveJogador)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Jogo_Rapido"
         Me.Text = "Invasores"
         CType(Me.PictTiro, System.ComponentModel.ISupportInitialize).EndInit()

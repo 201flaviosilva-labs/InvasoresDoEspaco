@@ -233,7 +233,7 @@ Partial Class JogoAPontosJvJ
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictTiroJ1)
         Me.Controls.Add(Me.PicJogador1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "JogoAPontosJvJ"
         Me.Text = "Invasores"
         CType(Me.PictTiroJ1, System.ComponentModel.ISupportInitialize).EndInit()

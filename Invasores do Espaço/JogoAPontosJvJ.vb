@@ -26,13 +26,11 @@
     Dim AlturadaMorte As Double = 0 'Recebe a altura da morte do invasor
     Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
     Dim PontoPorMorte As Double 'Contabiliza o POnto da morte
-    'Dim PontosSoma As Integer = 0 ' PontosSoma += NInvasoresMortos * 100
     Dim PontosJogador1 As Integer = 0 'Define os pontos do jogador 1
     Dim PontosJogador2 As Integer = 0 'Define os pontos do jogador 2
     Dim PontosJogador3 As Integer = 0 'Define os pontos do jogador 3
     Dim PontosJogador4 As Integer = 0 'Define os pontos do jogador 4
     Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
-    'Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
@@ -408,10 +406,14 @@
         If ContadorNumeroInvasoresMortos = NumDeInvasores Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
             TimerPrincipal.Enabled = False 'Parar o timer
             TimerInvasores.Enabled = False 'Parar o timer
-            If PontosJogador1 < PontosJogador2 Then 'Se  jogador 1 tiver menos pontos que o jogador 2
-                MsgBox("Joador 2 venceu") 'jogador 2 venceu
-            ElseIf PontosJogador1 > PontosJogador2 Then 'Se  jogador 2 tiver menos pontos que o jogador 1
-                MsgBox("Joador 1 venceu") 'jogador 1 venceu
+            If (PontosJogador1 > PontosJogador2) And (PontosJogador1 > PontosJogador3) And (PontosJogador1 > PontosJogador4) Then 'Se  jogador 1 tiver menos pontos que o jogador 2 e jogador 1 tiver menos pontos que o jogador 3 e jogador 1 tiver menos pontos que o jogador 4
+                MsgBox("Joador 1 venceu") 'jogador 2 venceu
+            ElseIf (PontosJogador2 > PontosJogador1) And (PontosJogador2 > PontosJogador3) And (PontosJogador2 > PontosJogador4) Then
+                MsgBox("Joador 2 venceu") 'jogador 1 venceu
+            ElseIf (PontosJogador3 > PontosJogador1) And (PontosJogador3 > PontosJogador2) And (PontosJogador3 > PontosJogador4) Then
+                MsgBox("Joador 3 venceu") 'jogador 3 venceu
+            ElseIf (PontosJogador4 > PontosJogador1) And (PontosJogador4 > PontosJogador2) And (PontosJogador4 > PontosJogador3) Then
+                MsgBox("Joador 4 venceu") 'jogador 4 venceu
             Else
                 MsgBox("Empate") 'Empate
             End If
@@ -708,10 +710,10 @@
             RandomVidaInvasor(X) = Int(2 * Rnd() + 1) 'Cria um número random
             If RandomVidaInvasor(X) = 1 Then ' se A vida definida do invasor for de 1 então
                 SomaDasVidasInvasores += 1 'Aumenta o número de Vida no total de todos os invasores
-                Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
+                Invasores(X).Image = My.Resources.Invasor1 'Vai buscar aos recursos a imagem do invasor
             ElseIf RandomVidaInvasor(X) = 2 Then ' Caso A vida definida do invasor for de 1 então
                 SomaDasVidasInvasores += 2 'Aumenta o número de Vida no total de todos os invasores
-                Invasores(X).Image = My.Resources.SpaceInvadersShip 'Vai buscar aos recursos a imagem do invasor
+                Invasores(X).Image = My.Resources.Invasor2 'Vai buscar aos recursos a imagem do invasor
             End If
 
             Invasores(X).Width = 50 'Diz quanto mede a PictureBox

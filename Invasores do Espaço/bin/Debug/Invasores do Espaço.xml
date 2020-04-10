@@ -22,7 +22,12 @@ Invasores do Espaço
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:Invasores_do_Espaço.My.Resources.Resources.invader">
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Invasor1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Invasores_do_Espaço.My.Resources.Resources.Invasor2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
