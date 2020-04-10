@@ -1,4 +1,5 @@
 ﻿Public Class JogoAPontosJvJ
+    'Exencial para o jogo
     Dim Jogador1Direita As Boolean 'Define o movimento do jogador 1 ir para a Direira
     Dim Jogador1Esquerda As Boolean 'Define o movimento do jogador 1 ir para a Esquerda
     Dim Jogador2Direita As Boolean 'Define o movimento do jogador 2 ir para a Direira
@@ -8,15 +9,19 @@
     Dim Jogador4Direita As Boolean 'Define o movimento do jogador 2 ir para a Direira
     Dim Jogador4Esquerda As Boolean 'Define o movimento do jogador 2 ir para a Esquerda
     Dim VelocidadeJogador As Integer = 3 'Define a velocidade do jogador
-    Dim VelocidadeTiro As Integer = 10 'Define a velocidade do tiro do jogador
+    Dim VelocidadeTiro As Integer = 20 'Define a velocidade do tiro do jogador
     Dim VelocidadeInvasor As Integer = 7 'Define a velocidade de deslocação dos invasores
     Dim IvasorCair As Integer = 50 'Define o degrau que os invasores vão cai em realação ao top
-    Const NumDeInvasores As Integer = 200 ' Escreve quantos invasores pertendo que sejam aparecidos na tela
+    Const NumDeInvasores As Integer = 150 ' Escreve quantos invasores pertendo que sejam aparecidos na tela
     Dim InvasorDireita(NumDeInvasores) As Boolean 'Define o movimento dos invasores neste caso para a direita
     Dim Invasores(NumDeInvasores) As PictureBox 'Cria uma PictureBox para cada um dos Invasores que serão criados
     Dim X As Integer 'X = Counter
-    Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
     Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
+
+    Dim RandomVidaInvasor(NumDeInvasores) As Integer ' Define o número de tiros que um invasor tem que levar para morrer
+    Dim NumeroVidasInvasoresMortas As Integer = 0 'Diz quantas Vidas de invasores há que foram Eliminadas
+    Dim SomaDasVidasInvasores As Integer ' Soma de todas as vidas dos invasores
+
     'Pontuações e temporalizador
     Dim AlturadaMorte As Double = 0 'Recebe a altura da morte do invasor
     Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
@@ -26,6 +31,7 @@
     Dim PontosJogador2 As Integer = 0 'Define os pontos do jogador 2
     Dim PontosJogador3 As Integer = 0 'Define os pontos do jogador 3
     Dim PontosJogador4 As Integer = 0 'Define os pontos do jogador 4
+    Dim ContadorNumeroInvasoresMortos As Integer ' Contador de número de Invasores mortos
     'Dim Pontos As Integer = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
 
@@ -34,11 +40,11 @@
         TemporalizadorDeJogo()
         MoverJogador()
         MoverTiro()
-        GameOver()
         MatarInvasorJ1()
         MatarInvasorJ2()
         MatarInvasorJ3()
         MatarInvasorJ4()
+        GameOver()
     End Sub
 
     Private Sub Invasores_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
@@ -251,12 +257,11 @@
 
     Private Sub Invasores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Loading Inicial
-        OpcoesInvasores()
         OpcoesGeral()
 
         If JogoPontosNJogadores >= 3 Then 'Se 3 ou mais jogadores estiver ativos então ativa a visibilidade da pic do jogador e dos pontos
-            PicJogador3.Visible = True
-            Label5.Visible = True
+            PicJogador3.Visible = True 'Torna a pic do jogador visivel
+            Label5.Visible = True 'Torna a label dos pontos visivel
         End If
         If JogoPontosNJogadores = 4 Then
             PicJogador4.Visible = True
@@ -266,6 +271,10 @@
 
     Private Sub OpcoesGeral()
         'Opções de tudo (Quase)
+        SomaDasVidasInvasores = 0 'Leva a soma a 0 para poder recontar de novo
+
+        OpcoesInvasores()
+
         'Para todos os invasores faz isto
         For Me.X = 1 To NumDeInvasores
             InvasorDireita(X) = True 'Permitir o invasor ir para a direita
@@ -279,22 +288,25 @@
         PictTiroJ3.Visible = False 'Tiro invisivel
         PictTiroJ4.Visible = False 'Tiro invisivel
 
-        
-
-        IvasorCair = 50 'Indicação quanto o invasor deve sair na tela
 
         'Começar de novo
-        PontosJogador1 = 0
-        PontosJogador2 = 0
-        PontosJogador3 = 0
-        PontosJogador4 = 0
+        PontosJogador1 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        PontosJogador2 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        PontosJogador3 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        PontosJogador4 = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
         TempoPartida = 0
+        PontoPorMorte = 0
         ContadorNumeroInvasoresMortos = 0
+        NumeroVidasInvasoresMortas = 0
+
         Jogador1Direita = False
         Jogador1Esquerda = False
         Jogador2Direita = False
         Jogador2Esquerda = False
+
         TimerPrincipal.Enabled = True
+        TimerInvasores.Enabled = True
+
         RotinaPontuacaoJ1()
         RotinaPontuacaoJ2()
 
@@ -395,6 +407,7 @@
         'Vitória
         If ContadorNumeroInvasoresMortos = NumDeInvasores Then 'Se o Numero de Invasores Mortos foi igual ao número de invasores "Vitória"
             TimerPrincipal.Enabled = False 'Parar o timer
+            TimerInvasores.Enabled = False 'Parar o timer
             If PontosJogador1 < PontosJogador2 Then 'Se  jogador 1 tiver menos pontos que o jogador 2
                 MsgBox("Joador 2 venceu") 'jogador 2 venceu
             ElseIf PontosJogador1 > PontosJogador2 Then 'Se  jogador 2 tiver menos pontos que o jogador 1
@@ -411,11 +424,19 @@
         For Me.X = 1 To NumDeInvasores
             If (PictTiroJ1.Top + PictTiroJ1.Height >= Invasores(X).Top) And (PictTiroJ1.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ1.Left + PictTiroJ1.Width >= Invasores(X).Left) And (PictTiroJ1.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ1.Visible = True) And (Invasores(X).Visible = True) Then
 
-                PontuacaoPorDegrauJ1()
+                If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                    ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                    PontuacaoPorDegrauJ1() 'Para apenas ganhar pontos quando matar o invasor
+                    Invasores(X).Visible = False 'O invasor fica invisivel
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                    RotinaPontuacaoJ1() 'Chama a rotina da pontuação para mostrar os pontos
+                ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                    RotinaPontuacaoJ1() 'Chama a rotina da pontuação para mostrar os pontos
+                End If
+                RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
-                Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiroJ1.Visible = False 'Torna o tiro invisivel
-                ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
             End If
         Next
     End Sub
@@ -425,11 +446,19 @@
         For Me.X = 1 To NumDeInvasores
             If (PictTiroJ2.Top + PictTiroJ2.Height >= Invasores(X).Top) And (PictTiroJ2.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ2.Left + PictTiroJ2.Width >= Invasores(X).Left) And (PictTiroJ2.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ2.Visible = True) And (Invasores(X).Visible = True) Then
 
-                PontuacaoPorDegrauJ2()
+                If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                    ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                    PontuacaoPorDegrauJ2() 'Para apenas ganhar pontos quando matar o invasor
+                    Invasores(X).Visible = False 'O invasor fica invisivel
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                    RotinaPontuacaoJ2() 'Chama a rotina da pontuação para mostrar os pontos
+                ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                    RotinaPontuacaoJ2() 'Chama a rotina da pontuação para mostrar os pontos
+                End If
+                RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
-                Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiroJ2.Visible = False 'Torna o tiro invisivel
-                ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
             End If
         Next
     End Sub
@@ -440,11 +469,19 @@
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ3.Top + PictTiroJ3.Height >= Invasores(X).Top) And (PictTiroJ3.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ3.Left + PictTiroJ3.Width >= Invasores(X).Left) And (PictTiroJ3.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ3.Visible = True) And (Invasores(X).Visible = True) Then
 
-                    PontuacaoPorDegrauJ3()
+                    If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                        ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                        PontuacaoPorDegrauJ3() 'Para apenas ganhar pontos quando matar o invasor
+                        Invasores(X).Visible = False 'O invasor fica invisivel
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ3() 'Chama a rotina da pontuação para mostrar os pontos
+                    ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ3() 'Chama a rotina da pontuação para mostrar os pontos
+                    End If
+                    RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
-                    Invasores(X).Visible = False 'Invasor atingido fica invisivel
                     PictTiroJ3.Visible = False 'Torna o tiro invisivel
-                    ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
                 End If
             Next
         End If
@@ -456,96 +493,27 @@
             For Me.X = 1 To NumDeInvasores
                 If (PictTiroJ4.Top + PictTiroJ4.Height >= Invasores(X).Top) And (PictTiroJ4.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiroJ4.Left + PictTiroJ4.Width >= Invasores(X).Left) And (PictTiroJ4.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiroJ4.Visible = True) And (Invasores(X).Visible = True) Then
 
-                    PontuacaoPorDegrauJ4()
+                    If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                        ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                        PontuacaoPorDegrauJ4() 'Para apenas ganhar pontos quando matar o invasor
+                        Invasores(X).Visible = False 'O invasor fica invisivel
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ4() 'Chama a rotina da pontuação para mostrar os pontos
+                    ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                        NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                        RotinaPontuacaoJ4() 'Chama a rotina da pontuação para mostrar os pontos
+                    End If
+                    RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
-                    Invasores(X).Visible = False 'Invasor atingido fica invisivel
                     PictTiroJ4.Visible = False 'Torna o tiro invisivel
-                    ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
                 End If
             Next
         End If
     End Sub
 
-    Private Sub OpcoesInvasores()
-        'Comçar todos os invasores do lado da tela
-        For Me.X = 1 To NumDeInvasores
-            'Cria uma PictureBox para cada um dos invasores que foi ordenado aparecer
-            Invasores(X) = New PictureBox
-            Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
-            Invasores(X).Width = 50 'Diz quanto mede a PictureBox
-            Invasores(X).Height = 50 'Diz quanto mede a PictureBox
-            Invasores(X).BackColor = Color.Transparent 'A PictureBox de cor irá ser transparente
-            Invasores(X).SizeMode = PictureBoxSizeMode.StretchImage 'A imagem irá se ajustar á PictureBox
-            Controls.Add(Invasores(X)) 'Para fazer os comandos a cima ditos resultar
-        Next
-    End Sub
-
-    Private Sub Invasores_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
-        'Pausa
-        If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
-            If Pausa = True Then 'Se pausa não estiver ativo
-                TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
-                TimerInvasores.Enabled = True ' Para os invasores de nadar
-                Label1.Visible = False 'Label que diz "Pausa fica visivel"
-                Pausa = False 'Pausa fica ativo
-            Else
-                TimerPrincipal.Enabled = False 'O timer volta a funcionar
-                TimerInvasores.Enabled = False 'O timer volta a funcionar
-                Label1.Visible = True 'A laber que diz "Pausa vai desaparecer"
-                Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
-            End If
-        End If
-
-        'Sair
-        If e.KeyChar = "x" Or e.KeyChar = "X" Then 'Au clicar na letra "X"
-            Me.Close() 'Fecha o formulário
-        End If
-    End Sub
-
-    Private Sub NovoJogo()
-        Dim jogarNovamente = MsgBox("Queres jogar de novo?", MsgBoxStyle.YesNo) 'Cria variabel que vai receber uma mensagagembox de sim ou não
-        If jogarNovamente = MsgBoxResult.Yes Then 'se o resultado for "sim"
-            OpcoesGeral() 'Começa de novo
-        Else 'Se receber "não"
-            Me.Close() 'Fecha o formulário
-        End If
-    End Sub
-
-    Sub RotinaPontuacaoJ1()
-        'Pontuação
-        PontosJogador1 += PontoPorMorte 'Aumenta a Pontuação do jogador
-        Label2.Text = PontosJogador1 'Escreve o nome do joagador 1 com os pontos
-    End Sub
-
-    Sub RotinaPontuacaoJ2()
-        'Pontuação
-        PontosJogador2 += PontoPorMorte 'Aumenta a Pontuação do jogador
-        Label4.Text = PontosJogador2 'Escreve o nome do joagador 2 com os pontos
-    End Sub
-
-    Sub RotinaPontuacaoJ3()
-        'Pontuação
-        PontosJogador3 += PontoPorMorte 'Aumenta a Pontuação do jogador
-        Label5.Text = PontosJogador3 'Escreve os pontos
-    End Sub
-
-    Sub RotinaPontuacaoJ4()
-        'Pontuação
-        PontosJogador4 += PontoPorMorte 'Aumenta a Pontuação do jogador
-        Label6.Text = PontosJogador4 'Escreve os pontos
-    End Sub
-
-    Sub TemporalizadorDeJogo()
-        'contabiliza o tempo de jogo jogado
-        TempoPartida += 1 'Aumenta o tempo jogado
-        Label3.Text = "Tempo: " & TempoPartida & " Ms" 'Mostra o tempo jogado em milissegundos
-    End Sub
-
     Sub PontuacaoPorDegrauJ1()
-
         If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
             AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
-
             'Degrau = fila
             If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
                 DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
@@ -570,7 +538,16 @@
             ' 5 - 150
             ' 6 - 120
             ' 7 - 100
-            RotinaPontuacaoJ1() 'Chama a rotina da pontuação para mostrar os pontos
+            PontosJogador1 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador1 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
         End If
     End Sub
 
@@ -602,7 +579,16 @@
             ' 5 - 150
             ' 6 - 120
             ' 7 - 100
-            RotinaPontuacaoJ2()
+            PontosJogador2 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador2 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
         End If
     End Sub
 
@@ -634,7 +620,16 @@
             ' 5 - 150
             ' 6 - 120
             ' 7 - 100
-            RotinaPontuacaoJ3()
+            PontosJogador3 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador3 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
         End If
     End Sub
 
@@ -666,7 +661,104 @@
             ' 5 - 150
             ' 6 - 120
             ' 7 - 100
-            RotinaPontuacaoJ4()
+            PontosJogador4 += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador4 += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
+        End If
+    End Sub
+
+    Sub RotinaPontuacaoJ1()
+        'Pontuação
+        PontosJogador1 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label2.Text = PontosJogador1 'Escreve os pontos
+    End Sub
+
+    Sub RotinaPontuacaoJ2()
+        'Pontuação
+        PontosJogador2 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label4.Text = PontosJogador2 'Escreve os pontos
+    End Sub
+
+    Sub RotinaPontuacaoJ3()
+        'Pontuação
+        PontosJogador3 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label5.Text = PontosJogador3 'Escreve os pontos
+    End Sub
+
+    Sub RotinaPontuacaoJ4()
+        'Pontuação
+        PontosJogador4 += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
+        Label6.Text = PontosJogador4 'Escreve os pontos
+    End Sub
+
+    Private Sub OpcoesInvasores()
+        'Comçar todos os invasores do lado da tela
+        Randomize()
+        For Me.X = 1 To NumDeInvasores
+            'Cria uma PictureBox para cada um dos invasores que foi ordenado aparecer
+            Invasores(X) = New PictureBox
+
+            RandomVidaInvasor(X) = Int(2 * Rnd() + 1) 'Cria um número random
+            If RandomVidaInvasor(X) = 1 Then ' se A vida definida do invasor for de 1 então
+                SomaDasVidasInvasores += 1 'Aumenta o número de Vida no total de todos os invasores
+                Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
+            ElseIf RandomVidaInvasor(X) = 2 Then ' Caso A vida definida do invasor for de 1 então
+                SomaDasVidasInvasores += 2 'Aumenta o número de Vida no total de todos os invasores
+                Invasores(X).Image = My.Resources.SpaceInvadersShip 'Vai buscar aos recursos a imagem do invasor
+            End If
+
+            Invasores(X).Width = 50 'Diz quanto mede a PictureBox
+            Invasores(X).Height = 50 'Diz quanto mede a PictureBox
+            Invasores(X).BackColor = Color.Transparent 'A PictureBox de cor irá ser transparente
+            Invasores(X).SizeMode = PictureBoxSizeMode.StretchImage 'A imagem irá se ajustar á PictureBox
+            Controls.Add(Invasores(X)) 'Para fazer os comandos a cima ditos resultar
+        Next
+    End Sub
+
+    Sub TemporalizadorDeJogo()
+        'contabiliza o tempo de jogo jogado
+        TempoPartida += 1 'Aumenta o tempo jogado
+        Label3.Text = "Tempo: " & TempoPartida & " Ms" 'Mostra o tempo jogado em milissegundos
+    End Sub
+
+    Private Sub NovoJogo()
+        Dim jogarNovamente = MsgBox("Queres jogar de novo?", MsgBoxStyle.YesNo) 'Cria variabel que vai receber uma mensagagembox de sim ou não
+        If jogarNovamente = MsgBoxResult.Yes Then 'se o resultado for "sim"
+            For Me.X = 1 To NumDeInvasores
+                Invasores(X).Visible = False 'Esconder todas os invasores que dominaram a terra
+            Next
+            OpcoesGeral() 'Começa de novo
+        Else 'Se receber "não"
+            Me.Close() 'Fecha o formulário
+        End If
+    End Sub
+
+    Private Sub Invasores_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
+        'Pausa
+        If e.KeyChar = "p" Or e.KeyChar = "P" Then 'Ao clicar na letra "p"
+            If Pausa = True Then 'Se pausa não estiver ativo
+                TimerPrincipal.Enabled = True 'Parar o timer que manda para tudo, daí ser uma pausa
+                TimerInvasores.Enabled = True ' Para os invasores de nadar
+                Label1.Visible = False 'Label que diz "Pausa fica visivel"
+                Pausa = False 'Pausa fica ativo
+            Else
+                TimerPrincipal.Enabled = False 'O timer volta a funcionar
+                TimerInvasores.Enabled = False 'O timer volta a funcionar
+                Label1.Visible = True 'A laber que diz "Pausa vai desaparecer"
+                Pausa = True 'Pausa fica desativo e pronto para ser ativo quando voltar a clicar no "P"
+            End If
+        End If
+
+        'Sair
+        If e.KeyChar = "x" Or e.KeyChar = "X" Then 'Au clicar na letra "X"
+            Me.Close() 'Fecha o formulário
         End If
     End Sub
 

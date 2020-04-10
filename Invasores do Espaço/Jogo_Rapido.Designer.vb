@@ -36,7 +36,6 @@ Partial Class Jogo_Rapido
         '
         'TimerPrincipal
         '
-        Me.TimerPrincipal.Enabled = True
         Me.TimerPrincipal.Interval = 1
         '
         'PictTiro

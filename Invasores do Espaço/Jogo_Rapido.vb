@@ -1,23 +1,33 @@
 ﻿Public Class Jogo_Rapido
+    'Exencial para o jogo
     Dim JogadorDireita As Boolean 'Define o movimento do jogador ir para a Direira
     Dim JogadorEsquerda As Boolean 'Define o movimento do jogador ir para a Esquerda
     Dim VelocidadeJogador As Integer = 3 'Define a velocidade do jogador
-    Dim VelocidadeTiro As Integer = 10 'Define a velocidade do tiro do jogador
+    Dim VelocidadeTiro As Integer = 20 'Define a velocidade do tiro do jogador
     Dim VelocidadeInvasor As Integer = 3 'Define a velocidade de deslocação dos invasores
     Dim IvasorCair As Integer = 50 'Define o degrau que os invasores vão cai em realação ao top
     Const NumDeInvasores As Integer = 30 ' Escrever quantos invasores pertendo que sejam aparecidos na tela
     Dim InvasorDireita(NumDeInvasores) As Boolean 'Define o movimento dos invasores neste caso para a direita
     Dim Invasores(NumDeInvasores) As PictureBox 'Cria uma PictureBox para cada um dos Invasores que serão criados
     Dim X As Integer 'X = Counter
-    Dim ContadorNumeroInvasoresMortos As Integer = 0 ' Contador de número de Invasores mortos
     Dim Pausa As Boolean = False 'Define se a pausa está ativa ou não
+
+    Dim RandomVidaInvasor(NumDeInvasores) As Integer ' Define o número de tiros que um invasor tem que levar para morrer
+    Dim NumeroVidasInvasoresMortas As Integer = 0 'Diz quantas Vidas de invasores há que foram Eliminadas
+    Dim SomaDasVidasInvasores As Integer ' Soma de todas as vidas dos invasores
+
+    '-------------------
+    Dim PrimeiroInvasor As Integer
+    Dim InvasoresCodigo(NumDeInvasores) As Integer
+    '--------------------------
+
     'Pontuações e temporalizador
     Dim AlturadaMorte As Double = 0 'Recebe a altura da morte do invasor
     Dim DegrauMorteInvasor As Byte = 0 'Recebe o degrau da morte do invasor
     Dim PontosJogador As Double = 0 ' Número de pontos -> Número de Invasores Mortos *100 para parecer mais como o original
     Dim TempoPartida As Integer = 0 ' Mostra o tempo da partida em millisegundos
-    ' Dim DegrauMorte As Integer = 0 'Conta o Degrau em que o invasor foi morto
     Dim PontoPorMorte As Double 'Contabiliza o POnto da morte
+    Dim ContadorNumeroInvasoresMortos As Integer = 0 ' Contador de número de Invasores mortos
 
     Private Sub TimerPrincipal_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerPrincipal.Tick
         'Timer 1 temporalizador
@@ -84,12 +94,15 @@
 
     Private Sub Invasores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Loading Inicial
-        OpcoesInvasores()
         OpcoesGeral()
     End Sub
 
     Private Sub OpcoesGeral()
         'Opções de tudo
+        SomaDasVidasInvasores = 0 'Leva a soma a 0 para poder recontar de novo
+
+        OpcoesInvasores() 'Chama os invasores para poder fazer as pontuações
+
         'Para todos os invasores faz isto
         For Me.X = 1 To NumDeInvasores
             InvasorDireita(X) = True 'Permitir o invasor ir para a direita
@@ -101,17 +114,20 @@
         PictTiro.Visible = False 'Tiro invisivel
 
         'Começar de novo
+        TimerPrincipal.Enabled = True
+        TimerInvasor.Enabled = True
         TempoPartida = 0
+        PontoPorMorte = 0
         ContadorNumeroInvasoresMortos = 0
+        PontosJogador = -50 ' Porque logo ao iniciar ele já irá começar com 50 pontos, então para começar com 0 tenho que tirar 50 pontos inicalmente
+        NumeroVidasInvasoresMortas = 0
         JogadorDireita = False
         JogadorEsquerda = False
-        TimerPrincipal.Enabled = True
         RotinaPontuacao()
         TemporalizadorDeJogo()
     End Sub
 
     Private Sub MoverTiro()
-
         If PictTiro.Visible = True Then 'Se o tiro estiver visivel
             PictTiro.Top -= VelocidadeTiro 'O tiro começa a andar para cima
         End If
@@ -160,8 +176,9 @@
         Next
 
         'Vitória
-        If ContadorNumeroInvasoresMortos = NumDeInvasores Then 'Se a pontuação foi igual ao número de invasores "Vitória"
+        If NumeroVidasInvasoresMortas = SomaDasVidasInvasores Then 'Se a pontuação foi igual ao número de invasores "Vitória"
             TimerPrincipal.Enabled = False 'Timer parar
+            TimerInvasor.Enabled = False 'Parar o timer dos invasores mexerem
             MsgBox("A Terra está Salva") 'Informar que a terra foi salva e que venceu
             NovoJogo() 'Perguntar se quer começar de novo
         End If
@@ -172,49 +189,88 @@
         For Me.X = 1 To NumDeInvasores
             If (PictTiro.Top + PictTiro.Height >= Invasores(X).Top) And (PictTiro.Top <= Invasores(X).Top + Invasores(X).Height) And (PictTiro.Left + PictTiro.Width >= Invasores(X).Left) And (PictTiro.Left <= Invasores(X).Left + Invasores(X).Width) And (PictTiro.Visible = True) And (Invasores(X).Visible = True) Then
 
-                If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
-                    AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
-
-                    'Degrau = fila
-                    If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
-                        DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
-                        DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
-                        DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
-                        DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
-                        DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
-                        DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
-                    ElseIf AlturadaMorte <= 300 Then 'Setima Fila
-                        DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
-                    End If
-                    PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
-                    ' 1 - 1 200
-                    ' 2 - 600
-                    ' 3 - 300
-                    ' 4 - 200
-                    ' 5 - 150
-                    ' 6 - 120
-                    ' 7 - 100
+                If RandomVidaInvasor(X) = 1 Then 'Se o invasor atingido tiver vida de 1 então
+                    ContadorNumeroInvasoresMortos += 1 'COnta o número de invasores mortos serve apenas para aumentar a pontuação
+                    MortePorDegrauSubRotina() 'Para apenas ganhar pontos quando matar o invasor por degrau
+                    Invasores(X).Visible = False 'O invasor fica invisivel
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
+                    RotinaPontuacao() 'Chama a rotina da pontuação para mostrar os pontos
+                ElseIf RandomVidaInvasor(X) >= 2 Then 'Senão se o invasor atingido tiver vida de 2 então
+                    NumeroVidasInvasoresMortas += 1 'Contador de Invasores Mortos
                     RotinaPontuacao() 'Chama a rotina da pontuação para mostrar os pontos
                 End If
+                RandomVidaInvasor(X) -= 1 'Retira 1 á vida do invasor, ou para o fazer desaparcer ou para ele perder mais um ponto 
 
-                Invasores(X).Visible = False 'Invasor atingido fica invisivel
                 PictTiro.Visible = False 'Torna o tiro invisivel
-                ContadorNumeroInvasoresMortos += 1 'Contador de Invasores Mortos
+
+                '----------------------
+                'If Invasores(X).Visible = False Then
+                'InvasoresCodigo(X) += 1
+                'PrimeiroInvasor = InvasoresCodigo(X)
+                ' End If
+                'Label4.Text = PrimeiroInvasor
+                '--------------------------
             End If
         Next
     End Sub
 
+    Private Sub MortePorDegrauSubRotina()
+        If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+            ' 2 - 600
+            ' 3 - 300
+            ' 4 - 200
+            ' 5 - 150
+            ' 6 - 120
+            ' 7 - 100
+            PontosJogador += PontoPorMorte 'Aumenta a Pontuação do jogador
+            PontosJogador += ContadorNumeroInvasoresMortos * 100 'Aumenta os pontos em relação aos invasores mortos
+            ' 1 - 100 - +100
+            ' 2 - 300 - +200
+            ' 3 - 600 - +300
+            ' 4 - 1 000 - +400
+            ' 5 - 1 500 - +500
+            ' 6 - 2 100 - +600
+            ' 7 - 2 800 - +700
+            '...
+        End If
+    End Sub
+
     Private Sub OpcoesInvasores()
         'Comçar todos os invasores do lado da tela
+
+        Randomize()
         For Me.X = 1 To NumDeInvasores
             'Cria uma PictureBox para cada um dos invasores que foi ordenado aparecer
             Invasores(X) = New PictureBox
-            Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
+
+            RandomVidaInvasor(X) = Int(2 * Rnd() + 1) 'Cria um número random
+            If RandomVidaInvasor(X) = 1 Then ' se A vida definida do invasor for de 1 então
+                SomaDasVidasInvasores += 1 'Aumenta o número de Vida no total de todos os invasores
+                Invasores(X).Image = My.Resources.invader 'Vai buscar aos recursos a imagem do invasor
+            ElseIf RandomVidaInvasor(X) = 2 Then ' Caso A vida definida do invasor for de 1 então
+                SomaDasVidasInvasores += 2 'Aumenta o número de Vida no total de todos os invasores
+                Invasores(X).Image = My.Resources.SpaceInvadersShip 'Vai buscar aos recursos a imagem do invasor
+            End If
+
             Invasores(X).Width = 50 'Diz quanto mede a PictureBox
             Invasores(X).Height = 50 'Diz quanto mede a PictureBox
             Invasores(X).BackColor = Color.Transparent 'A PictureBox de cor irá ser transparente
@@ -248,7 +304,11 @@
     Private Sub NovoJogo()
         Dim jogarNovamente = MsgBox("Queres jogar de novo?", MsgBoxStyle.YesNo) 'Cria variabel que vai receber uma mensagagembox de sim ou não
         If jogarNovamente = MsgBoxResult.Yes Then 'se o resultado for "sim"
+            For Me.X = 1 To NumDeInvasores
+                Invasores(X).Visible = False 'Esconder todas os invasores que dominaram a terra
+            Next
             OpcoesGeral() 'Começa de novo
+
         Else 'Se receber "não"
             Me.Close() 'Fecha o formulário
         End If
@@ -256,7 +316,7 @@
 
     Sub RotinaPontuacao()
         'Pontuação
-        PontosJogador += PontoPorMorte 'Aumenta a Pontuação do jogador
+        PontosJogador += 50 'Por Acertar em algum invasor (Mesmo que não o mate) tambem receberá 50 pontos
         Label2.Text = "Pontos: " & PontosJogador
     End Sub
 
@@ -267,6 +327,8 @@
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerInvasor.Tick
+        'timer do invasor
         MoverInvasor()
     End Sub
+
 End Class

@@ -94,7 +94,7 @@ Partial Class JogoAPontosJvJ
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(148, 26)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "0"
+        Me.Label2.Text = "Jogador 1"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -137,7 +137,7 @@ Partial Class JogoAPontosJvJ
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(148, 26)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "0"
+        Me.Label4.Text = "Jogador 2"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
@@ -149,7 +149,7 @@ Partial Class JogoAPontosJvJ
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(148, 26)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "0"
+        Me.Label5.Text = "Jogador 3"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label5.Visible = False
         '
@@ -162,7 +162,7 @@ Partial Class JogoAPontosJvJ
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(148, 26)
         Me.Label6.TabIndex = 9
-        Me.Label6.Text = "0"
+        Me.Label6.Text = "Jogador 4"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label6.Visible = False
         '

@@ -1,0 +1,42 @@
+Pontuação por cada um dos invasores mortos
+1+1=2
+Pontuaçao+=100
+
+-------------------------
+
+Soma pontos em relação á soma de número de invasores já mortos
+
+Pontos += NInvasoresMortos * 100
+
+X=X+NumeroDeInvasoresMortos *100
+
+
+-------------------------
+
+
+Por fila
+
+ If Invasores(X).Visible = True Then 'Se o invasor atingido ainda estiver viivel
+            AlturadaMorte = Invasores(X).Top 'Recebe a altura da morte do invasor
+            'Degrau = fila
+            If AlturadaMorte <= 0 Then 'Primeira fila (onde os dudes nascem)
+                DegrauMorteInvasor = 1 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 50 Then 'Segunda Fila
+                DegrauMorteInvasor = 2 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 100 Then 'Terceira Fila
+                DegrauMorteInvasor = 4 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 150 Then 'Quarta Fila
+                DegrauMorteInvasor = 6 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 200 Then 'Quinta Fila
+                DegrauMorteInvasor = 8 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 250 Then 'Sesta Fila
+                DegrauMorteInvasor = 10 'Diz quanto via dividir por ter morto neste degrau
+            ElseIf AlturadaMorte <= 300 Then 'Setima Fila
+                DegrauMorteInvasor = 12 'Diz quanto via dividir por ter morto neste degrau
+            End If
+            PontoPorMorte = 1200 / DegrauMorteInvasor 'Divide a pontuação por invasor morto na sua fila
+            ' 1 - 1 200
+
+-----------------------------
+
+Invasor da frente
