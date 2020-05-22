@@ -7,7 +7,7 @@ Com vários modos:
 	- Jogo Rápido;
 	- Modo Campanha -> O jogador tem o objetivo de em várias ondas de invasores, cada vez mais complicada e tentar salvar a terra matando todos
 	- Original -> Em memória do jogo original
-	- Multijogador (2 a 6 Jogadores):
+	- Multijogador local (2 a 6 Jogadores):
 		› Pontos:
 		› Team Deathmatch (Mata-mata) (2 ou 4 jogadores):
 			• Pontos -> A primeira equipa ao chegar aos X pontos vence
