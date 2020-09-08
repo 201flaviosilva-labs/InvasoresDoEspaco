@@ -13,3 +13,5 @@ Com vários modos:
 			• Pontos -> A primeira equipa ao chegar aos X pontos vence
 			• Tempo -> Quando X tempo acabar, a equipa que tiver mais pontos vence
 			• Morte Subita -> Quando todos os jogadores de uma equipa perderem ao mesmo tempo, o jogo acaba e vence a outra equipa
+
+[Baixar](https://drive.google.com/file/d/1IrzjB2sBXuNdM5Dfey-MzrHNpBKu-9lN/view?usp=sharing)
